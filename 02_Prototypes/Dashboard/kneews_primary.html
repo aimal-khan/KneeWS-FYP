@@ -1425,6 +1425,14 @@ tr.click { cursor: pointer; }
     <span class="crumb" id="crumb">System Architecture</span>
     
     <div class="top-right">
+            <!-- Clinical Scenario Quick Presets -->
+      <div class="scenario-bar">
+        <span class="lab" style="font-size:10px">Demo Presets:</span>
+        <button class="scenario-btn active" data-sc="A" title="Acute ACL Tear (Study A)">⚡ Acute ACL</button>
+        <button class="scenario-btn" data-sc="C" title="Silent Miss Omission (Study C)">⚠️ Silent Miss</button>
+        <button class="scenario-btn" data-sc="B" title="Model Abstention Gap (Study B)">🛡️ Abstention</button>
+      </div>
+
       <!-- Rubric Mode Switch -->
       <label class="rubric-toggle" title="Toggle FYP Committee rubric badges (F1..F10)">
         <input type="checkbox" id="rubricSwitch">
@@ -1598,6 +1606,11 @@ tr.click { cursor: pointer; }
         <div class="ovl">
           <input type="checkbox" id="ovl" checked>
           <label for="ovl">Evidence Heatmap Overlay</label>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:-6px">
+          <span class="lab" style="font-size:10.5px;min-width:56px">Intensity</span>
+          <input type="range" id="ovlAlpha" min="0" max="100" value="85" aria-label="Heatmap intensity" style="flex:1;accent-color:var(--accent-bright)">
+          <span class="mono num small" id="ovlAlphaVal" style="min-width:32px;text-align:right;color:var(--accent-bright)">85%</span>
         </div>
         <div>
           <span class="lab">Target Pathology (12 Findings)</span>
@@ -2482,9 +2495,10 @@ function drawSlice() {
       if (a > 0) {
         const p = S.model === "hard" ? pHard(s.p[S.find]) : s.p[S.find];
         const r = e[4] * 640 * (0.7 + p * 0.6);
+        const intensity = (S.ovlAlpha !== undefined ? S.ovlAlpha : 85) / 100;
         const gr = ctx.createRadialGradient(e[2] * 640, e[3] * 640, 0, e[2] * 640, e[3] * 640, r);
-        gr.addColorStop(0, `rgba(235,104,52,${0.75 * a * Math.max(0.25, p)})`);
-        gr.addColorStop(0.6, `rgba(237,161,0,${0.35 * a * Math.max(0.2, p)})`);
+        gr.addColorStop(0, `rgba(235,104,52,${0.75 * a * Math.max(0.25, p) * intensity})`);
+        gr.addColorStop(0.6, `rgba(237,161,0,${0.35 * a * Math.max(0.2, p) * intensity})`);
         gr.addColorStop(1, "rgba(237,161,0,0)");
         ctx.fillStyle = gr;
         ctx.beginPath();
@@ -3310,6 +3324,76 @@ function render(id) {
 }
 
 // Initial view boot
+
+// Heatmap Opacity Control
+S.ovlAlpha = 85;
+const ovlAlphaSlider = $("#ovlAlpha");
+if (ovlAlphaSlider) {
+  ovlAlphaSlider.addEventListener("input", e => {
+    S.ovlAlpha = +e.target.value;
+    $("#ovlAlphaVal").textContent = S.ovlAlpha + "%";
+    drawSlice();
+  });
+}
+
+// Clinical Scenario Presets
+function setScenario(k, findIdx, targetScreen, msg) {
+  S.study = k;
+  sel.value = k;
+  S.find = findIdx;
+  const e = EV[findIdx];
+  S.ser = e[0];
+  S.slice = e[1];
+  S.rep = {};
+  setStudyCtx();
+  $$(".scenario-btn").forEach(b => b.classList.toggle("active", b.dataset.sc === k));
+  go(targetScreen);
+  toast(msg);
+}
+
+$$("[data-sc]").forEach(b => {
+  b.addEventListener("click", () => {
+    const sc = b.dataset.sc;
+    if (sc === "A") {
+      setScenario("A", 0, "viewer", "⚡ Scenario Loaded: Acute ACL Tear (Study A · Sagittal Slice 15)");
+    } else if (sc === "C") {
+      setScenario("C", 10, "viewer", "⚠️ Scenario Loaded: Silent Miss (Report omitted contusion; KneeWS detected it)");
+    } else if (sc === "B") {
+      setScenario("B", 8, "analysis", "🛡️ Scenario Loaded: Model Abstention (Synovitis uncertainty range blocks sign-off)");
+    }
+  });
+});
+
+// Presentation Keyboard Shortcuts
+window.addEventListener("keydown", e => {
+  if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
+  if (e.code === "Space") {
+    e.preventDefault();
+    const cb = $("#cineBtn");
+    if (cb) cb.click();
+  } else if (e.code === "ArrowLeft") {
+    e.preventDefault();
+    if (S.screen === "viewer") {
+      S.slice = Math.max(1, S.slice - 1);
+      $("#slice").value = S.slice;
+      drawSlice();
+    }
+  } else if (e.code === "ArrowRight") {
+    e.preventDefault();
+    if (S.screen === "viewer") {
+      const max = SER[S.ser].sl;
+      S.slice = Math.min(max, S.slice + 1);
+      $("#slice").value = S.slice;
+      drawSlice();
+    }
+  } else if (e.key === "m" || e.key === "M") {
+    const nextM = S.model === "soft" ? "hard" : "soft";
+    const btn = $(`#modelSeg button[data-m="${nextM}"]`);
+    if (btn) btn.click();
+    toast(`Model Mode: ${nextM === "soft" ? "Noise-Aware Model (KneeWS)" : "Hard Baseline Model"}`);
+  }
+});
+
 go("home");
 })();
 </script>
