@@ -190,32 +190,39 @@ p { margin: 0 0 0.75em; max-width: 68ch; color: var(--ink-2); }
   border-bottom: 1px solid var(--rule);
 }
 .brand .mark {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 9px;
   background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
   color: #FFF;
   display: grid;
   place-items: center;
-  font-weight: 700;
-  font-size: 15px;
   box-shadow: 0 0 16px var(--accent-glow);
-  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  flex-shrink: 0;
 }
 .brand .t {
   font-weight: 700;
-  font-size: 16.5px;
+  font-size: 16px;
   letter-spacing: -0.02em;
   color: var(--ink);
   display: flex;
   align-items: center;
   gap: 6px;
+  line-height: 1.2;
+}
+.brand .t .acc {
+  color: var(--accent-bright);
+  font-weight: 800;
 }
 .brand .s {
-  font-size: 11px;
+  font-size: 10.5px;
   color: var(--ink-3);
   display: block;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+  white-space: nowrap;
 }
 .vbadge {
   display: inline-block;
@@ -228,6 +235,9 @@ p { margin: 0 0 0.75em; max-width: 68ch; color: var(--ink-2); }
   background: var(--warn-bg);
   color: var(--warn);
   border: 1px solid var(--warn-border);
+}
+.vbadge[hidden], [hidden] {
+  display: none !important;
 }
 
 .nav {
@@ -317,23 +327,28 @@ body.hide-rubric .nav .k {
   display: none;
 }
 
-/* Tour Floating Bar */
+/* Tour Floating HUD */
 .tour-bar {
   position: fixed;
   bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(14, 19, 26, 0.92);
-  backdrop-filter: blur(16px);
+  right: 28px;
+  left: auto;
+  transform: none;
+  background: rgba(14, 19, 26, 0.94);
+  backdrop-filter: blur(20px);
   border: 1px solid var(--accent-bright);
-  border-radius: 999px;
-  padding: 8px 16px 8px 20px;
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
   box-shadow: 0 12px 36px rgba(0,0,0,0.6), 0 0 20px var(--accent-glow);
   z-index: 1000;
   animation: screenFadeIn 0.25s ease;
+  max-width: 520px;
+  width: calc(100% - 56px);
+  box-sizing: border-box;
 }
 .tour-bar[hidden] { display: none !important; }
 .tour-step-info {
@@ -342,10 +357,27 @@ body.hide-rubric .nav .k {
   gap: 10px;
   font-size: 13px;
   color: var(--ink);
+  min-width: 0;
+}
+#tourText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
 }
 [data-theme="light"] .tour-bar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+  border-color: var(--accent);
+}
+@media (max-width: 768px) {
+  .tour-bar {
+    right: 14px;
+    left: 14px;
+    width: calc(100% - 28px);
+    max-width: none;
+    bottom: 14px;
+  }
 }
 
 .demo {
@@ -374,7 +406,8 @@ body.hide-rubric .nav .k {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 12px 32px;
+  height: 60px;
+  padding: 0 32px;
   border-bottom: 1px solid var(--rule);
   background: var(--raise);
   position: sticky;
@@ -382,6 +415,7 @@ body.hide-rubric .nav .k {
   z-index: 20;
   backdrop-filter: blur(16px);
   box-shadow: var(--shadow-sm);
+  box-sizing: border-box;
 }
 
 .top .crumb {
@@ -391,6 +425,7 @@ body.hide-rubric .nav .k {
   display: flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
 }
 .top .crumb::before {
   content: "";
@@ -404,63 +439,180 @@ body.hide-rubric .nav .k {
 .top-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+/* Clinical Scenario Quick Presets */
+.scenario-bar {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 2px 3px;
+  background: var(--sunk);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  gap: 2px;
+  box-sizing: border-box;
+}
+.scenario-bar .scenario-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 0 8px;
+  user-select: none;
+}
+.scenario-btn {
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  user-select: none;
+}
+.scenario-btn:hover {
+  color: var(--ink);
+  background: var(--raise-hover);
+}
+.scenario-btn.active {
+  background: var(--raise);
+  color: var(--ink);
+  font-weight: 600;
+  border-color: var(--rule-2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 /* Rubric Mode Switch */
 .rubric-toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 7px;
-  background: var(--ground);
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-size: 11.5px;
-  color: var(--ink-2);
-  cursor: pointer;
-}
-.rubric-toggle input { cursor: pointer; accent-color: var(--accent-bright); }
-
-/* Study Selector Pill */
-.ctx {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  color: var(--ink-2);
-  background: var(--ground);
+  gap: 8px;
+  height: 34px;
+  padding: 0 11px;
+  background: var(--sunk);
   border: 1px solid var(--rule);
   border-radius: var(--radius-sm);
-  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-2);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+.rubric-toggle:hover {
+  background: var(--raise-hover);
+  color: var(--ink);
+  border-color: var(--rule-2);
+}
+.rubric-toggle input[type="checkbox"] {
+  cursor: pointer;
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  accent-color: var(--accent-bright);
+}
+
+/* Active Study Selector */
+.ctx {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 4px 0 10px;
+  font-size: 12px;
+  color: var(--ink-2);
+  background: var(--sunk);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.ctx .lab {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 700;
+  user-select: none;
 }
 .ctx .mono {
   background: var(--raise);
-  border: 1px solid var(--rule);
+  border: 1px solid var(--rule-2);
   padding: 2px 7px;
   border-radius: 4px;
   color: var(--accent-bright);
   font-weight: 600;
+  font-size: 11.5px;
+}
+.ctx #ctxMeta {
+  color: var(--ink-3);
+  font-size: 11.5px;
+  margin-right: 2px;
+}
+.study-select {
+  height: 26px;
+  background: var(--raise);
+  color: var(--ink);
+  border: 1px solid var(--rule-2);
+  border-radius: 6px;
+  padding: 0 24px 0 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  transition: all 0.15s ease;
+}
+.study-select:hover {
+  border-color: var(--accent-bright);
+  background-color: var(--raise-hover);
 }
 
+/* Theme Switcher */
 .theme-btn {
-  background: var(--ground);
+  height: 34px;
+  padding: 0 12px;
+  background: var(--sunk);
   border: 1px solid var(--rule);
   color: var(--ink-2);
   border-radius: var(--radius-sm);
-  padding: 6px 11px;
   font-size: 12px;
-  display: flex;
+  font-weight: 500;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+  user-select: none;
+  white-space: nowrap;
 }
-.theme-btn:hover { background: var(--raise-hover); color: var(--ink); }
+.theme-btn:hover {
+  background: var(--raise-hover);
+  color: var(--ink);
+  border-color: var(--rule-2);
+}
 
 /* ==========================================================================
    Content Container & Animations
    ========================================================================== */
 .content {
-  padding: 28px 36px 72px;
+  padding: 28px 36px 96px;
   max-width: 1320px;
   width: 100%;
   animation: screenFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -635,8 +787,8 @@ body.hide-rubric .nav .k {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 3px 8px;
-  border-radius: 999px;
+  padding: 2.5px 7px;
+  border-radius: 6px;
   white-space: nowrap;
 }
 .pill.ok { background: var(--good-bg); color: var(--good); border: 1px solid var(--good-border); }
@@ -652,8 +804,8 @@ body.hide-rubric .nav .k {
   gap: 6px;
   font-size: 11.5px;
   font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 5px;
+  padding: 2.5px 8px;
+  border-radius: 6px;
   border: 1px solid transparent;
   white-space: nowrap;
 }
@@ -857,7 +1009,7 @@ tr.click { cursor: pointer; }
 .prog {
   height: 6px;
   background: var(--ground);
-  border-radius: 999px;
+  border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--rule);
 }
@@ -1306,8 +1458,8 @@ tr.click { cursor: pointer; }
   background: var(--raise);
   color: var(--ink);
   border: 1px solid var(--accent-bright);
-  padding: 11px 22px;
-  border-radius: 999px;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
   font-size: 13.5px;
   font-weight: 500;
   box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 18px var(--accent-glow);
@@ -1339,9 +1491,17 @@ tr.click { cursor: pointer; }
      ========================================================================== -->
 <aside class="rail">
   <div class="brand">
-    <div class="mark">KW</div>
+    <div class="mark" title="KneeWS Diagnostic &amp; Research Suite">
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 10C5 15.5 8.5 18 11.5 18C14 18 15.2 16 16 15C16.8 16 18 18 20.5 18C23.5 18 27 15.5 27 10" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 23.5C9.5 22.5 12.5 22.5 16 22.5C19.5 22.5 22.5 22.5 26 23.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+        <path d="M3 14C6.5 14 8 11 11 11C13 11 14.5 13 16 13C17.5 13 19 11 21 11C24 11 25.5 14 29 14" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="16" cy="13" r="2.2" fill="#38BDF8"/>
+        <circle cx="16" cy="13" r="4.5" stroke="#38BDF8" stroke-width="0.75" stroke-dasharray="2 1.5"/>
+      </svg>
+    </div>
     <div>
-      <span class="t">KneeWS <span class="vbadge" id="vbadge" hidden></span></span>
+      <span class="t">Knee<span class="acc">WS</span> <span class="vbadge" id="vbadge" hidden></span></span>
       <span class="s">Diagnostic &amp; Research Suite</span>
     </div>
   </div>
@@ -1425,9 +1585,9 @@ tr.click { cursor: pointer; }
     <span class="crumb" id="crumb">System Architecture</span>
     
     <div class="top-right">
-            <!-- Clinical Scenario Quick Presets -->
-      <div class="scenario-bar">
-        <span class="lab" style="font-size:10px">Demo Presets:</span>
+      <!-- Clinical Scenario Quick Presets -->
+      <div class="scenario-bar" role="group" aria-label="Clinical Scenario Presets">
+        <span class="scenario-label">PRESETS</span>
         <button class="scenario-btn active" data-sc="A" title="Acute ACL Tear (Study A)">⚡ Acute ACL</button>
         <button class="scenario-btn" data-sc="C" title="Silent Miss Omission (Study C)">⚠️ Silent Miss</button>
         <button class="scenario-btn" data-sc="B" title="Model Abstention Gap (Study B)">🛡️ Abstention</button>
@@ -1441,10 +1601,10 @@ tr.click { cursor: pointer; }
 
       <!-- Active Study -->
       <div class="ctx">
-        <span class="lab">Study</span>
+        <span class="lab">STUDY</span>
         <span class="mono" id="ctxStudy">KWS-0417</span>
         <span id="ctxMeta">34 F · sports injury</span>
-        <select id="studySel" class="btn sm" aria-label="Switch demo study"></select>
+        <select id="studySel" class="study-select" aria-label="Switch demo study"></select>
       </div>
 
       <!-- Theme Switcher -->
