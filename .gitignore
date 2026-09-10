@@ -36,3 +36,11 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Temporary Office & Lock Files
+~$*
+
+# External sub-repositories
+RSNA_Knee_Abnormality_Detection/
+
+
