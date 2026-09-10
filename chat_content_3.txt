@@ -1,0 +1,2917 @@
+Skip to content
+Chat history
+New chat
+Images
+Plugins
+Deep research
+See plans and pricing
+Settings
+Help
+
+Get responses tailored to you
+
+Log in to get answers based on saved chats, plus create images and upload files.
+
+Log in
+ChatGPT
+Log in
+Sign up for free
+
+This is a copy of a shared ChatGPT chat. It won't be added to memory.
+
+Report conversation
+Monday 1:40 PM
+Uploaded a file
+Uploaded a file
+# Role
+
+Act as a senior **AI/ML research scientist, medical-imaging systems architect, and Final Year Project advisor** with experience in:
+
+- medical imaging and MRI,
+- computer vision,
+- multimodal AI,
+- clinical decision-support systems,
+- machine learning research methodology,
+- end-to-end AI product/system design,
+- software architecture,
+- academic FYP evaluation,
+- Complex Computing Problems (CCP),
+- and converting research contributions into demonstrable software systems.
+
+Your job is not merely to suggest an ML model.
+
+Your job is to help design a **complete, coherent, research-oriented Final Year Project system** that:
+
+1. is grounded in the attached RSNA Knee Abnormality Detection research report,
+2. satisfies the attached CCP/FYP guidelines,
+3. contains approximately **8–10 meaningful system features**,
+4. has sufficient technical and research depth for a **one-year FYP**,
+5. is demonstrable to an FYP panel as a complete working system,
+6. and still has a clear central research contribution rather than becoming an arbitrary collection of features.
+
+---
+
+# Attached Sources
+
+Two primary documents are attached.
+
+## Document A — Research Report
+
+This is the detailed research report produced from prior Deep Research on:
+
+**RSNA Knee Abnormality Detection**
+
+It contains, among other things:
+
+- dataset analysis,
+- challenge analysis,
+- literature review,
+- research gaps,
+- candidate research directions,
+- recommended research problems,
+- feasibility considerations,
+- and possible R&D studies.
+
+Treat this report as the primary source for understanding the **research landscape and candidate research contribution**.
+
+---
+
+## Document B — CCP / FYP Guidelines
+
+This is the official guideline document that defines the criteria our FYP must satisfy.
+
+Treat this document as a **hard constraint**.
+
+A project that sounds scientifically interesting but does not satisfy the CCP requirements is not acceptable.
+
+Do not rely on your generic understanding of "CCP" when the attached document provides a specific institutional definition.
+
+Extract the exact criteria from the supplied guidelines and evaluate every proposed project against those actual criteria.
+
+---
+
+# Context
+
+I need to register my FYP.
+
+My supervisor recommended starting with a novel, complex, relatively new dataset and extracting a research problem from it.
+
+Following that advice, I investigated the RSNA Knee Abnormality Detection challenge and dataset through Deep Research.
+
+I now have a research report describing:
+
+- the dataset,
+- existing work,
+- research opportunities,
+- gaps,
+- and possible studies.
+
+However, an FYP cannot consist only of an isolated ML experiment or research paper.
+
+I need to build a **complete system around the selected research problem**.
+
+The resulting FYP should be substantial enough to represent approximately **one academic year of work** and should have roughly **8–10 meaningful features/capabilities**.
+
+At the same time, those features must form a coherent system around the research contribution.
+
+I do NOT want:
+
+> "train a classifier + add login + dashboard + CRUD + export + notifications"
+
+simply to inflate the feature count.
+
+The FYP should have genuine computational depth.
+
+---
+
+# Primary Objective
+
+Using the attached research report and CCP guidelines, determine:
+
+> **What complete FYP system should be built around the strongest feasible research direction identified in the RSNA Knee Abnormality Detection research?**
+
+The final recommendation should integrate:
+
+**Research problem → AI/ML pipeline → system capabilities → user workflow → software architecture → evaluation → CCP compliance**
+
+into one cohesive project.
+
+---
+
+# Critical Principle
+
+The project should have **one central identity**.
+
+Do not combine several unrelated research gaps simply because each sounds interesting.
+
+For example, do not arbitrarily combine:
+
+- multilingual NLP,
+- domain adaptation,
+- explainability,
+- segmentation,
+- federated learning,
+- report generation,
+- anomaly detection,
+
+unless they serve the same clearly defined research question and system objective.
+
+Prefer:
+
+> one strong central research contribution + several supporting system capabilities
+
+over:
+
+> many disconnected ML experiments.
+
+---
+
+# Phase 1 — Read and Extract the CCP Requirements
+
+Before designing anything, inspect the attached CCP/FYP guideline document carefully.
+
+Extract:
+
+- the formal definition of a CCP,
+- all mandatory criteria,
+- expected characteristics,
+- complexity requirements,
+- knowledge areas involved,
+- engineering considerations,
+- constraints,
+- evaluation expectations,
+- documentation requirements,
+- and any examples or rejection conditions provided.
+
+Separate:
+
+### Mandatory requirements
+
+Requirements that the project must satisfy.
+
+### Strongly desirable requirements
+
+Criteria that strengthen CCP classification.
+
+### Irrelevant/non-applicable requirements
+
+Anything that does not apply to this type of project.
+
+Do not paraphrase away important institutional terminology.
+
+Use the wording and concepts from the official document where relevant.
+
+---
+
+# Phase 2 — Extract the Strongest Research Candidates
+
+Read the attached RSNA research report completely.
+
+Identify the strongest candidate research directions it found.
+
+For each serious candidate, summarize:
+
+- research question,
+- research gap,
+- proposed contribution,
+- expected methodology,
+- dataset requirements,
+- technical difficulty,
+- compute requirements,
+- medical-domain dependencies,
+- experimental risk,
+- publication potential,
+- FYP feasibility.
+
+Do not independently invent completely new research directions at this stage unless the report clearly leaves an important opportunity unexplored.
+
+The research report should remain the basis of the project.
+
+---
+
+# Phase 3 — Determine What Can Become a Complete System
+
+Evaluate which research directions naturally support the construction of an end-to-end system.
+
+Ask of each candidate:
+
+> What would a real user actually do with this system?
+
+Potential users might include, depending on what the research supports:
+
+- radiologists,
+- researchers,
+- clinicians,
+- medical-imaging analysts,
+- dataset curators,
+- AI model developers,
+
+but do not invent a clinical workflow unsupported by the research.
+
+Determine whether each candidate can support:
+
+- meaningful input,
+- meaningful processing,
+- multiple AI/system components,
+- meaningful output,
+- visualization,
+- interaction,
+- analysis,
+- evaluation,
+- persistence/history where appropriate,
+- and a convincing end-to-end demonstration.
+
+Reject candidates that can only produce a notebook experiment unless there is a credible way to turn them into a coherent research platform.
+
+---
+
+# Phase 4 — Generate 3–5 Coherent FYP System Concepts
+
+Based on the strongest research directions, propose **3–5 alternative complete FYP concepts**.
+
+Each concept must have:
+
+## 1. Project identity
+
+One sentence answering:
+
+> What is this system?
+
+## 2. Target user
+
+Who would use it?
+
+## 3. Core problem
+
+What problem does it solve?
+
+## 4. Research contribution
+
+What scientific question is actually being investigated?
+
+## 5. System contribution
+
+What useful software/system is built around that research?
+
+## 6. Dataset role
+
+How is the RSNA dataset used?
+
+## 7. End-to-end workflow
+
+Describe:
+
+**Input → preprocessing → AI analysis → research-specific processing → output → user interaction**
+
+## 8. Major technical components
+
+Such as, where justified:
+
+- DICOM ingestion,
+- MRI preprocessing,
+- series identification,
+- model inference,
+- multimodal fusion,
+- report processing,
+- uncertainty analysis,
+- localization,
+- visualization,
+- experiment tracking,
+- backend services,
+- model serving,
+- data storage,
+- frontend application.
+
+Only include components that serve the project objective.
+
+---
+
+# Phase 5 — Design 8–10 Meaningful Features for Each Strong Candidate
+
+For each of the strongest system concepts, derive approximately **8–10 substantial features/capabilities**.
+
+A feature should represent a meaningful technical capability of the system.
+
+Do NOT count trivial UI functionality separately just to increase the number.
+
+Examples of things that ordinarily should NOT count as major features:
+
+- login,
+- logout,
+- profile editing,
+- dark mode,
+- basic CRUD,
+- static pages,
+- simple PDF export,
+- password reset.
+
+These may exist in the eventual product but should not be presented as the intellectual substance of the FYP.
+
+Prefer capabilities involving:
+
+- non-trivial AI processing,
+- medical-image handling,
+- multimodal information,
+- analysis,
+- model comparison,
+- uncertainty,
+- visualization,
+- intelligent retrieval,
+- workflow automation,
+- research evaluation,
+- or meaningful system integration.
+
+---
+
+# Feature Coherence Requirement
+
+For every proposed feature, explicitly answer:
+
+> How does this feature support the central research/system objective?
+
+If there is no strong answer, remove the feature.
+
+The 8–10 features must behave like parts of **one product**, not 8–10 mini-projects.
+
+---
+
+# Feature Depth Requirement
+
+Classify each feature as:
+
+- **Core research**
+- **Supporting AI capability**
+- **System/engineering capability**
+- **User-facing analytical capability**
+
+The final system should contain a sensible balance.
+
+It should not contain 10 separate research problems.
+
+---
+
+# Example of the Desired Level of Thinking
+
+Suppose the selected research question were about uncertainty-aware knee MRI abnormality detection.
+
+A coherent system might conceptually revolve around:
+
+1. MRI study ingestion,
+2. DICOM/series processing,
+3. multi-abnormality inference,
+4. uncertainty estimation,
+5. confidence-based case prioritization,
+6. visual evidence/localization,
+7. study-level interactive review,
+8. model confidence/calibration analytics,
+9. research comparison between baseline and proposed method.
+
+That would represent one coherent system.
+
+In contrast:
+
+1. classifier,
+2. chatbot,
+3. appointment scheduling,
+4. patient registration,
+5. billing,
+6. report generation,
+7. email alerts,
+8. admin CRUD,
+
+would be artificial feature inflation and should be rejected.
+
+The above example is illustrative only. Do not assume uncertainty estimation should be selected unless the attached research supports it.
+
+---
+
+# Phase 6 — Explicit CCP Mapping
+
+This phase is critical.
+
+For every serious project concept, create a **CCP compliance analysis** based specifically on the attached guideline.
+
+For every relevant CCP criterion:
+
+1. quote or accurately summarize the requirement,
+2. identify which part of the proposed system satisfies it,
+3. explain why,
+4. identify any weakness,
+5. identify what would need to be added or changed to make compliance stronger.
+
+Do not merely say:
+
+> "Yes, it satisfies CCP."
+
+Demonstrate the mapping.
+
+---
+
+# Complexity Analysis
+
+Explain where the genuine complexity comes from.
+
+Potential sources may include, if actually relevant:
+
+- heterogeneous MRI studies,
+- DICOM processing,
+- multi-series reasoning,
+- 3D medical imaging,
+- multimodal data,
+- weak/noisy supervision,
+- multilingual text,
+- high-dimensional data,
+- model uncertainty,
+- non-trivial evaluation,
+- domain generalization,
+- computation constraints,
+- conflicting objectives,
+- system integration,
+- model serving,
+- medical interpretability,
+- performance/scalability constraints.
+
+Explicitly distinguish:
+
+### Research complexity
+
+Complexity of answering the scientific question.
+
+### Computational complexity
+
+Compute, storage, algorithms, image processing, etc.
+
+### Engineering complexity
+
+Building and integrating the complete system.
+
+### Domain complexity
+
+MRI/radiology-specific requirements and ambiguity.
+
+---
+
+# Phase 7 — Evaluate One-Year FYP Scope
+
+Assume this is a **one-year undergraduate FYP**.
+
+Evaluate whether each project has enough work for that duration without becoming unrealistic.
+
+The project should be:
+
+- larger than a semester ML assignment,
+- larger than a Kaggle notebook,
+- larger than a simple inference web app,
+- technically substantial,
+- research-oriented,
+- demonstrable,
+- but achievable by undergraduate students.
+
+Identify for each concept:
+
+### Too little scope?
+
+Could it realistically be completed in only a few weeks?
+
+### Appropriate scope?
+
+Does it support progressive development and research over the year?
+
+### Too much scope?
+
+Does it effectively require a research lab, hospital partnership, or large engineering team?
+
+---
+
+# Phase 8 — Consider Dataset Availability Constraints
+
+The RSNA competition may have constraints around:
+
+- dataset access,
+- competition duration,
+- test labels,
+- Kaggle infrastructure,
+- redistribution,
+- licensing,
+- external deployment.
+
+Analyze these carefully.
+
+Distinguish between:
+
+- using the data during research/training,
+- demonstrating the system using permitted samples,
+- hosting data,
+- redistributing data,
+- deploying a public application.
+
+Do not assume that competition data can be redistributed or publicly hosted.
+
+Design the system so that the FYP remains demonstrable within legitimate dataset-access constraints.
+
+---
+
+# Phase 9 — Architecture of the Strongest Concepts
+
+For the top concepts, describe a realistic high-level architecture.
+
+Possible layers may include:
+
+### Data layer
+
+- dataset storage,
+- DICOM handling,
+- metadata,
+- derived artifacts,
+- research experiment results.
+
+### AI pipeline
+
+- preprocessing,
+- training,
+- inference,
+- research-specific method,
+- evaluation.
+
+### Model-serving layer
+
+If appropriate.
+
+### Backend/application layer
+
+Responsibilities and APIs.
+
+### Frontend
+
+Only where useful for demonstrating or interacting with the system.
+
+### Research/evaluation subsystem
+
+How experiments, baselines, ablations, metrics, calibration, etc. are evaluated.
+
+Do not over-engineer this into enterprise microservices unless there is a genuine reason.
+
+A well-structured modular monolith or simple service architecture may be preferable for an FYP.
+
+---
+
+# Phase 10 — Define the Demonstration Story
+
+For each top concept, explain what I could show the FYP panel during a final demonstration.
+
+Give a realistic flow such as:
+
+1. user supplies/selects a knee MRI study,
+2. system parses the study,
+3. system identifies available MRI series,
+4. AI pipeline processes the study,
+5. research method performs its specialized analysis,
+6. predicted abnormalities are presented,
+7. evidence/confidence/comparison is presented,
+8. user explores results,
+9. system demonstrates the research contribution relative to the baseline.
+
+Adapt this to the chosen concept.
+
+The demo should make the project's technical depth understandable without requiring the panel to inspect notebooks.
+
+---
+
+# Phase 11 — Research vs Product Boundary
+
+For every project, explicitly distinguish:
+
+## Research contribution
+
+What belongs in the thesis/research paper?
+
+## Product/system contribution
+
+What is built so the research becomes a usable and demonstrable system?
+
+## Supporting engineering
+
+What exists only to make the system operational?
+
+This distinction is important.
+
+Do not claim ordinary software engineering as research novelty.
+
+Likewise, do not build a system in which the central research contribution is invisible.
+
+---
+
+# Phase 12 — Compare and Rank the Concepts
+
+Rank the proposed concepts using:
+
+1. CCP compliance,
+2. strength of research question,
+3. scientific novelty,
+4. fit with RSNA dataset,
+5. feasibility,
+6. one-year scope,
+7. technical depth,
+8. system coherence,
+9. quality of 8–10 features,
+10. demo/presentation potential,
+11. measurable evaluation,
+12. compute feasibility,
+13. dependency on medical experts,
+14. risk of project failure,
+15. publication potential.
+
+Do not select the most complicated project automatically.
+
+The strongest FYP is the one with the best combination of:
+
+> **research quality + CCP depth + coherent system + feasibility + demonstrability**
+
+---
+
+# Phase 13 — Fully Design the Recommended Project
+
+After ranking the alternatives, choose **one recommended FYP**.
+
+Develop it substantially further.
+
+Provide:
+
+## Proposed FYP title
+
+Prefer a serious academic/system title rather than a marketing name.
+
+Also provide a short system/project name if useful.
+
+---
+
+## One-sentence description
+
+Explain the project in one sentence.
+
+---
+
+## Problem statement
+
+Precisely define the real problem.
+
+---
+
+## Motivation
+
+Why does this matter?
+
+---
+
+## Research gap
+
+Ground this in the attached research report.
+
+---
+
+## Research question
+
+Provide:
+
+- one primary research question,
+- secondary questions only where necessary.
+
+---
+
+## Hypothesis
+
+Give a falsifiable hypothesis where appropriate.
+
+---
+
+## Research contribution
+
+What new knowledge could the FYP produce?
+
+---
+
+## System objective
+
+What will actually be built?
+
+---
+
+## Target users
+
+Who is the system designed for?
+
+Be careful not to describe it as a clinically approved diagnostic system.
+
+---
+
+# Required Features
+
+Define the recommended **8–10 major features**.
+
+For each feature provide:
+
+### Feature name
+
+### What it does
+
+### User value
+
+### Technical depth
+
+### Research/system role
+
+### Why it belongs in this project
+
+### Dependencies on other features
+
+### Relative implementation difficulty
+
+---
+
+# Feature Dependency Map
+
+Show how the features relate.
+
+Identify:
+
+### Foundation features
+
+Required by almost everything else.
+
+### Core research features
+
+Directly implement/evaluate the research contribution.
+
+### Supporting features
+
+Necessary to create a complete system.
+
+### Presentation/analysis features
+
+Make results understandable and demonstrable.
+
+---
+
+# End-to-End Workflow
+
+Walk through the complete system from:
+
+**MRI input → result**
+
+Include all important processing stages.
+
+---
+
+# Proposed Architecture
+
+Describe:
+
+- frontend,
+- backend,
+- AI/ML pipeline,
+- inference mechanism,
+- data storage,
+- DICOM handling,
+- experiment/evaluation subsystem,
+- model artifacts,
+- relevant external dependencies.
+
+Recommend technologies only where there is enough information to justify them.
+
+Do not lock the project into unnecessary frameworks.
+
+---
+
+# ML Architecture
+
+At a conceptual level specify:
+
+- inputs,
+- preprocessing,
+- representation,
+- baseline model,
+- proposed research method,
+- outputs,
+- loss/objective,
+- evaluation.
+
+Keep baseline and proposed research method clearly separated.
+
+---
+
+# Experimental Design
+
+Specify:
+
+- baseline experiments,
+- proposed method,
+- ablations,
+- train/validation strategy,
+- metrics,
+- robustness/generalization tests where relevant,
+- statistical comparison where appropriate.
+
+The project must be able to answer a **research question**, not merely produce predictions.
+
+---
+
+# Data Pipeline
+
+Describe:
+
+- raw dataset,
+- DICOM processing,
+- metadata,
+- preprocessing,
+- derived datasets,
+- caching,
+- training artifacts,
+- model outputs.
+
+Identify any potentially expensive preprocessing that should be performed offline.
+
+---
+
+# CCP Compliance Matrix
+
+For every mandatory CCP criterion from the provided guideline, give:
+
+- criterion,
+- relevant subsystem/feature,
+- explanation,
+- evidence of complexity,
+- risk of failing the criterion,
+- mitigation.
+
+This should be detailed enough that I could use it when defending the proposal to the FYP panel.
+
+---
+
+# One-Year Scope
+
+Divide the project conceptually into:
+
+## Minimum viable FYP
+
+The smallest version that still constitutes a valid and substantial FYP.
+
+## Target version
+
+The full recommended project.
+
+## Stretch work
+
+Interesting additions only if the core research and system are already complete.
+
+This prevents scope creep.
+
+---
+
+# Risk Analysis
+
+Identify major risks including:
+
+- model performance,
+- dataset restrictions,
+- compute limits,
+- weak labels,
+- medical expertise,
+- preprocessing complexity,
+- FYP timeline,
+- research idea failing experimentally,
+- integration complexity.
+
+For each major risk, provide a fallback.
+
+A negative research result should not automatically cause the entire FYP to fail.
+
+---
+
+# Phase 14 — Panel Rejection Analysis
+
+Act temporarily as a skeptical FYP panel member.
+
+Try to reject the recommended project.
+
+Ask questions such as:
+
+- Is this really a CCP?
+- Is this just a Kaggle competition wrapped in a web application?
+- What is actually novel?
+- What exactly will the students develop?
+- What is technically difficult?
+- Are 8–10 features genuine?
+- Does the system solve one coherent problem?
+- Is the research contribution measurable?
+- Is this medically credible?
+- Is the scope realistic?
+- Is the system simply running a pretrained model?
+- What happens if the proposed research method does not improve results?
+- Why does this require a one-year FYP?
+
+Identify every credible criticism.
+
+Then modify or strengthen the project design where possible to address those criticisms.
+
+Do not hide weaknesses.
+
+---
+
+# Phase 15 — Final Recommendation for Registration
+
+Finish with a concise proposed registration-ready definition containing:
+
+## FYP title
+
+## Problem statement
+
+2–4 paragraphs.
+
+## Research objective
+
+## System objective
+
+## Research contribution
+
+## 8–10 core features
+
+Short descriptions only.
+
+## CCP justification
+
+Concise but directly mapped to the official guidelines.
+
+## Expected outcome
+
+## Why this is a one-year FYP
+
+This section should be suitable as the conceptual basis for discussing registration with my supervisor.
+
+Do not invent formal wording from university forms unless those forms are attached.
+
+---
+
+# Research and Browsing Instructions
+
+The attached documents are the primary sources.
+
+You may perform external research when useful for:
+
+- validating feasibility,
+- checking existing comparable systems,
+- verifying whether a proposed feature/research contribution already exists,
+- checking technical approaches,
+- confirming data-format/tooling considerations,
+- assessing compute feasibility,
+- identifying relevant academic baselines.
+
+However:
+
+- clearly distinguish attached-report conclusions from new external research,
+- do not override the official CCP document with generic definitions,
+- cite external factual claims,
+- prefer peer-reviewed and official sources.
+
+---
+
+# Important Constraints
+
+## Do not turn this into a hospital management system
+
+Features such as:
+
+- appointments,
+- billing,
+- patient administration,
+- generic authentication,
+- doctor profiles,
+
+are irrelevant unless the central project specifically requires them.
+
+---
+
+## Do not artificially inflate the feature count
+
+Eight to ten features means eight to ten **meaningful system capabilities**, not eight to ten pages or CRUD operations.
+
+---
+
+## Do not make every feature a separate research problem
+
+There should preferably be **one central research contribution**.
+
+Other capabilities should support that contribution.
+
+---
+
+## Do not overclaim clinical use
+
+Unless supported by the evidence, frame the application as:
+
+- research decision-support,
+- AI-assisted analysis,
+- educational/research tooling,
+
+rather than a replacement for radiologists or a clinically validated diagnostic product.
+
+---
+
+## Do not over-engineer the software architecture
+
+The intellectual complexity should primarily come from:
+
+- the problem,
+- algorithms,
+- data,
+- research methodology,
+- and meaningful system integration.
+
+Not from creating unnecessary microservices, distributed systems, or infrastructure.
+
+---
+
+## Do not optimize primarily for Kaggle ranking
+
+The competition provides the dataset and problem context.
+
+The FYP must have an independent academic research question.
+
+Leaderboard performance may be part of evaluation but should not define the project.
+
+---
+
+# Desired Final Output Structure
+
+Produce the report in this exact broad order:
+
+1. **Executive Recommendation**
+2. **What the CCP Guidelines Actually Require**
+3. **Relevant Findings From the Existing RSNA Research**
+4. **Strongest Research Directions That Can Support a Full System**
+5. **Candidate FYP System #1**
+6. **Candidate FYP System #2**
+7. **Candidate FYP System #3**
+8. **Additional Candidates if Strong Enough**
+9. **Comparison and Ranking**
+10. **Recommended FYP**
+11. **Research Question and Contribution**
+12. **Complete 8–10 Feature Set**
+13. **Feature Dependency/Coherence Analysis**
+14. **End-to-End User/System Workflow**
+15. **System Architecture**
+16. **AI/ML Architecture**
+17. **Research Methodology and Evaluation**
+18. **Dataset and Data Pipeline**
+19. **CCP Compliance Analysis**
+20. **One-Year Scope: Minimum / Target / Stretch**
+21. **Final Demonstration Scenario**
+22. **Risk and Fallback Strategy**
+23. **Skeptical Panel/Rejection Analysis**
+24. **Registration-Ready Project Definition**
+25. **Questions I Should Discuss With My Supervisor**
+26. **Final Verdict**
+
+---
+
+# Final Questions to Answer
+
+End by answering these explicitly:
+
+### 1.
+
+**Which single research direction from the existing report should form the core of the FYP, and why?**
+
+### 2.
+
+**What complete system should be built around that research direction?**
+
+### 3.
+
+**What are its 8–10 genuinely meaningful features?**
+
+### 4.
+
+**How does each part map to the actual CCP requirements?**
+
+### 5.
+
+**Why is this more than a Kaggle model wrapped in a UI?**
+
+### 6.
+
+**Why is it large enough for a one-year FYP without being unrealistically ambitious?**
+
+### 7.
+
+**What would I actually demonstrate to the FYP panel?**
+
+### 8.
+
+**What is the minimum viable version that would still constitute a successful FYP?**
+
+### 9.
+
+**What aspects should I confirm with my supervisor before registering it?**
+
+### 10.
+
+**Would you recommend registering this project in its proposed form? If not, what should change first?**
+Show more
+
+TL;DR: The research is trying to solve one simple problem:
+
+We have thousands of knee MRI scans, but we do not have trustworthy expert labels for most of them. Instead, we mostly have the radiologist’s written report. How can we use those reports to teach an AI model without blindly assuming that every report is perfectly correct and complete?
+
+That is the core of the project. deep-research-report
+
+1. First, forget about the AI model
+
+Think of the dataset like this.
+
+For one patient, we have:
+
+Knee MRI images
+
+and something like a radiologist's report:
+
+“Possible partial ACL tear. Small joint effusion. No fracture.”
+
+Ideally, to train an AI system, we would want an expert to look at every MRI and give us clean labels:
+
+ACL abnormality → Yes
+
+MCL abnormality → No
+
+Fracture → No
+
+Effusion → Yes
+
+etc.
+
+There are 12 abnormalities in total.
+
+The problem is that doing this manually for thousands of MRI studies is expensive and time-consuming.
+
+In this dataset, the research report found that the public training data appears to contain about 4,407 MRI studies but only 58 studies with direct expert challenge labels. Most of the other studies instead have their original radiology reports. deep-research-report
+
+So the natural idea is:
+
+“Can we read the reports and automatically create labels from them?”
+
+Yes—but that creates the actual research problem.
+
+2. Why can't we simply use the report as the correct answer?
+
+Because a radiology report is not a perfect checklist of all 12 abnormalities.
+
+Suppose the report says:
+
+“ACL tear.”
+
+That clearly tells us:
+
+ACL = positive.
+
+Easy.
+
+But suppose it says:
+
+“ACL is intact.”
+
+That means:
+
+ACL = negative.
+
+Also easy.
+
+Now suppose it says:
+
+“Possible partial ACL tear.”
+
+That is not definitely positive or definitely negative.
+
+It means:
+
+ACL = uncertain.
+
+And suppose the report says absolutely nothing about the ACL.
+
+What does that mean?
+
+It could mean:
+
+“The ACL is normal.”
+
+But it could also mean:
+
+“The radiologist simply didn't think it was important enough to mention.”
+
+Those are completely different things.
+
+The research report identifies this as one of the most important weaknesses in naïvely converting reports into labels. deep-research-report
+
+3. This gives us four possible states
+
+Instead of forcing every report statement immediately into:
+
+Yes / No
+
+our research proposes representing each abnormality as:
+
+1. Positive
+
+The report clearly says the abnormality exists.
+
+Example:
+
+“ACL tear is present.”
+
+2. Explicitly negative
+
+The report clearly says it does not exist.
+
+Example:
+
+“ACL is intact.”
+
+3. Uncertain
+
+The radiologist isn't sure.
+
+Example:
+
+“Possible partial ACL tear.”
+
+4. Unmentioned
+
+The report says nothing about it.
+
+This fourth category is especially important.
+
+The project asks:
+
+Should “not mentioned” really be treated as “No”?
+
+That sounds like a small detail, but it may affect thousands of training labels.
+
+4. What are current simple approaches doing?
+
+A simple approach might convert the report into:
+
+ACL mentioned as abnormal → 1
+Otherwise → 0
+
+So if ACL isn't mentioned:
+
+ACL = 0
+
+The AI then learns from these values as if they were correct.
+
+We call these automatically produced labels pseudo-labels or weak labels.
+
+They're called "weak" because they were not directly assigned by an expert specifically for our classification task.
+
+5. What is our research proposing instead?
+
+Instead of saying:
+
+“This label is definitely 0 or definitely 1,”
+
+we want to say:
+
+“Based on what the report says and how reliable this kind of statement usually is, how likely is the true answer to be positive?”
+
+For example, imagine our analysis discovers:
+
+If report explicitly says ACL tear:
+91% of expert labels agree.
+
+If report says ACL is normal:
+96% agree.
+
+If report is uncertain:
+55% actually turn out positive.
+
+If ACL isn't mentioned:
+15% still turn out positive.
+
+These numbers are just examples, not actual results.
+
+Instead of training with:
+
+Positive   → 1
+Negative   → 0
+Uncertain  → 0
+Unmentioned → 0
+
+we might train with something like:
+
+Positive    → 0.91
+Negative    → 0.04
+Uncertain   → 0.55
+Unmentioned → 0.15
+
+Now the AI receives information about uncertainty, rather than being taught that uncertain information is perfectly certain.
+
+That is the central research idea.
+
+6. But how do we know which report statements are trustworthy?
+
+This is where the small set of expert-labeled MRI studies becomes extremely useful.
+
+For those cases we have both:
+
+What the original report said
+
+and
+
+What the challenge's expert reviewers later decided from the MRI.
+
+So we can compare them.
+
+For example:
+
+Report: "Possible ACL tear"
+Expert label: ACL abnormality = Yes
+
+Another:
+
+Report: ACL not mentioned
+Expert label: ACL abnormality = Yes
+
+Another:
+
+Report: "No fracture"
+Expert label: Fracture = No
+
+Across these examples we can measure:
+
+How trustworthy is each kind of report statement for each abnormality?
+
+The attached research report specifically highlights the important point that the original clinical report and the challenge reference labels come from different interpretations of the MRI, so they should not automatically be treated as identical ground truth. deep-research-report
+
+7. Where does the AI model come into this?
+
+Once we have created better training labels, we train an image model.
+
+You don't need to think deeply about the internal neural network yet.
+
+Conceptually, it is just a function:
+
+Knee MRI
+    ↓
+AI
+    ↓
+Probability of each of 12 abnormalities
+
+For example:
+
+ACL abnormality       87%
+MCL abnormality       11%
+Medial meniscus       73%
+Lateral meniscus      14%
+Fracture               3%
+Effusion              81%
+...
+
+The important point is:
+
+The main research is not inventing a fancy MRI model.
+
+In fact, we deliberately want to keep the image model relatively standard.
+
+Why?
+
+Because we want to test whether changing the quality of the training labels is what improves the results.
+
+If we also completely change the image model, we won't know what caused the improvement.
+
+8. The experiment is therefore very simple conceptually
+
+We train the same MRI model twice.
+
+Model A — Normal approach
+
+Train it using hard report labels:
+
+Yes = 1
+Everything else = 0
+
+or another conventional hard-label baseline.
+
+Model B — Our approach
+
+Train exactly the same model using our uncertainty-aware labels.
+
+For example:
+
+positive → high probability
+negative → low probability
+uncertain → intermediate probability
+unmentioned → learned probability
+
+Then compare them.
+
+9. What are we actually trying to prove?
+
+Our main research question is:
+
+Does treating radiology-report labels as uncertain information produce a better knee-MRI model than pretending those labels are perfectly correct?
+
+That is the entire thesis in one sentence.
+
+The hypothesis is:
+
+The uncertainty-aware labels will teach the MRI model better than hard pseudo-labels.
+
+But the project is still valid if that turns out to be false.
+
+Suppose we discover:
+
+“For ACL and meniscus abnormalities, uncertainty-aware labels help considerably, but for fracture and effusion they provide almost no benefit.”
+
+That is still a useful research result.
+
+We have discovered something about when weak supervision works and when it doesn't.
+
+10. Why are multilingual reports important?
+
+The reports come from many countries and are written in roughly a dozen languages according to RSNA's description of the dataset. deep-research-report
+
+So before determining whether a report says:
+
+positive / negative / uncertain / unmentioned
+
+the system must understand the text.
+
+That might involve:
+
+a multilingual language model;
+
+translation followed by analysis;
+
+terminology/rule-based methods;
+
+or comparisons between these approaches.
+
+But multilingual NLP is supporting the main problem.
+
+The project is not:
+
+“Build a translator for radiology reports.”
+
+It is:
+
+Use the report correctly as supervision for MRI learning.
+
+11. Why do we still need MRI images?
+
+Because the report only exists during training.
+
+The final system is supposed to work like:
+
+New knee MRI
+      ↓
+AI model
+      ↓
+12 abnormality predictions
+
+It should not require a radiology report for the new MRI.
+
+So the report is like a teacher helping the model during training.
+
+Once training is finished, the teacher disappears.
+
+The research report describes this as using the report as training-time information, while the final prediction remains image-based. deep-research-report
+
+12. A simple analogy
+
+Imagine teaching a student using thousands of old exam papers.
+
+For most of the papers, you don't have the official answer sheet.
+
+Instead, you have notes written by different teachers.
+
+Some notes say:
+
+“Correct.”
+
+Some say:
+
+“Probably correct.”
+
+Some say:
+
+“Incorrect.”
+
+And sometimes the teacher says nothing.
+
+A bad approach would be:
+
+If the teacher didn't explicitly say “correct,” mark the answer wrong.
+
+Our research asks:
+
+Can we first learn how reliable these teacher notes are, and then use them more intelligently when training the student?
+
+In our case:
+
+Student = MRI AI model
+
+Exam paper = MRI scan
+
+Teacher notes = radiology report
+
+Official answer sheet = expert challenge label
+
+Research contribution = learning how much to trust each kind of teacher note
+
+That is essentially the project.
+
+13. What does the complete system do?
+
+The FYP is larger than the research experiment because FAST requires an actual working deployable system, not just a notebook. FAST_FYP_Student_Idea_Selection…
+
+The complete pipeline is approximately:
+
+                TRAINING
+
+Knee MRI ──────────────────────────────┐
+                                      │
+Radiology Report                      │
+       ↓                              │
+Understand report                     │
+       ↓                              │
+Positive / Negative /                 │
+Uncertain / Unmentioned               │
+       ↓                              │
+Estimate how reliable                 │
+those statements are                  │
+       ↓                              │
+Generate better labels                │
+       ↓                              │
+       └──────────► Train MRI AI ◄────┘
+                         ↓
+                  Trained MRI Model
+
+Then:
+
+                REAL USE / DEMO
+
+New Knee MRI
+      ↓
+Read DICOM study
+      ↓
+AI Model
+      ↓
+12 abnormality predictions
+      ↓
+Confidence + relevant MRI evidence
+14. What do the nine system features mean in simple language?
+1. MRI reader
+
+The system can open real medical DICOM knee MRI studies, not just JPG images.
+
+2. Report reader
+
+It understands the associated written radiology report.
+
+3. Report meaning detector
+
+For each disease, it determines:
+
+positive / negative / uncertain / not mentioned.
+
+4. Report reliability learner
+
+It compares reports with expert labels and learns:
+
+“How much should I trust this type of statement?”
+
+5. Better training-label generator
+
+Instead of blindly generating 0 or 1, it can produce more realistic probabilities.
+
+6. Knee MRI AI model
+
+It learns to detect the 12 abnormalities from the MRI.
+
+7. Research comparison system
+
+It trains/tests:
+
+normal approach vs our proposed approach.
+
+8. Error investigation
+
+You can inspect where:
+
+report,
+
+AI,
+
+expert label
+
+disagree with one another.
+
+9. Final MRI analysis system
+
+You can give it an MRI with no report, and it predicts the abnormalities.
+
+15. Why is this research instead of simply an AI application?
+
+Because we are not merely asking:
+
+“Can AI classify an MRI?”
+
+That has already been studied extensively.
+
+We are asking:
+
+What is the correct way to learn from imperfect clinical reports when expert MRI labels are scarce?
+
+And we answer that question scientifically using:
+
+a baseline;
+
+a proposed method;
+
+controlled experiments;
+
+ablations;
+
+statistical analysis;
+
+failure analysis.
+
+That is why the project has a defensible research identity rather than just being a Kaggle model with a UI. deep-research-report
+
+16. The most important distinction to remember
+
+There are really three different things:
+
+The radiology report
+
+What the original doctor wrote during normal clinical work.
+
+The expert label
+
+What challenge experts later decided when independently reviewing the MRI.
+
+The AI prediction
+
+What our image model learns to predict.
+
+Our research studies the relationship:
+
+Report→Better Training Signal→MRI AI→Expert Target
+	​
+
+
+The mistake we are trying to avoid is pretending:
+
+Report=Expert Ground Truth.
+17. The whole FYP in one paragraph
+
+We have thousands of knee MRI scans, but expert labels are scarce. Most scans instead have a radiologist's written report. Those reports contain useful information, but they are incomplete and uncertain: a doctor may explicitly identify a condition, explicitly reject it, express uncertainty, or simply not mention it. Instead of converting every report into hard Yes/No labels and treating those labels as perfect truth, our research will estimate how reliable different types of report statements are using the small expert-labeled subset. We will then generate uncertainty-aware training labels, train an MRI model using them, and compare it against the conventional hard-label approach. Finally, the research will be built into a complete system that accepts real knee MRI DICOM studies, supports research and error analysis, and can analyze a new MRI using images alone.
+
+The one sentence you should remember for explaining this to your supervisor or panel
+
+We are researching whether an MRI model can learn better from radiology reports if we explicitly account for the fact that the reports are incomplete and uncertain instead of treating every report-derived label as perfect ground truth.
+
+Sources
+Sources
+Context
+
+Since the detailed report has suggested multiple potential candidates for research, I want to explore other systems as well.
+
+Task
+
+Just like you came up with KneeWS system with a specific research question, specific features, etc. , explore some more paths and come up with another detailed system.
+
+Show more
+Worked for 39s
+
+I’ll answer as a senior medical-imaging AI research scientist and FYP systems architect.
+
+TL;DR: The strongest genuinely different alternative to KneeWS is an MRI-centric project rather than a report/NLP-centric one:
+
+Build a knee MRI system that can intelligently handle a variable number and type of MRI series, and research whether such a model remains reliable when expected MRI sequences are missing or non-standard.
+
+I would call the system KneeSet for now.
+
+The research report explicitly identifies this as the strongest imaging-centered alternative: current approaches often select a fixed set of sagittal/coronal/axial series, while the RSNA data contains heterogeneous examinations with variable series composition. It proposes testing whether a typed variable-set model with deliberate series dropout is more robust than fixed-series models. deep-research-report
+
+1. First: what other research paths are available?
+
+Beyond KneeWS, the report gives several distinct directions.
+
+One is reports as privileged information: instead of converting the radiology report into 12 labels, use the complete report to teach the MRI model during training through image-text learning or teacher-student distillation. That has high research upside but also the highest model complexity. RSNA Knee Abnormality Detection…
+
+Another is protocol-robust multi-series MRI learning: focus entirely on the imaging problem—different MRI studies contain different numbers and kinds of series, and a model designed around three fixed inputs may fail when one is absent or unusual. The research report considers this high-novelty, high-depth, feasible with a consumer GPU if representations are cached, and potentially publishable. RSNA Knee Abnormality Detection…
+
+A third is cross-site/scanner generalization: test whether a model that performs well on randomly split data collapses when evaluated on an unseen hospital, scanner vendor or acquisition domain. This could be very strong, but the report warns that its feasibility depends on whether useful site/vendor metadata survives de-identification. RSNA Knee Abnormality Detection…
+
+A fourth is compute-aware evidence selection: study how many MRI series/slices are actually necessary and whether an adaptive model can preserve accuracy while processing much less data. This is feasible, but it needs careful framing so it does not become mere Kaggle runtime optimization. deep-research-report
+
+Of these, I would develop protocol-robust multi-series learning as the next complete FYP system because it is the cleanest alternative to KneeWS. It gives you a fundamentally different research identity:
+
+KneeWS investigates the quality of supervision. KneeSet investigates the structure and robustness of the MRI input itself.
+
+2. Proposed FYP
+Academic title
+
+Protocol-Robust Multi-Series Learning for Knee MRI Under Missing and Heterogeneous Acquisitions
+
+A more system-oriented title:
+
+A Protocol-Robust Multi-Series System for Multi-Label Knee MRI Analysis
+
+Short name:
+
+KneeSet
+3. The idea in simple words
+
+A knee MRI is not one image.
+
+It usually looks more like:
+
+Knee MRI Study
+    │
+    ├── Sagittal series
+    │      ├── image 1
+    │      ├── image 2
+    │      └── ...
+    │
+    ├── Coronal series
+    │
+    ├── Axial series
+    │
+    ├── Another fluid-sensitive series
+    │
+    └── Possibly other sequences
+
+Different MRI sequences reveal different things.
+
+For example, one orientation may be particularly useful for looking at a ligament, while another may make a different structure easier to see.
+
+The problem is:
+
+Not every MRI examination necessarily contains exactly the same set of series.
+
+The attached research report notes that public inspection of the RSNA data shows variable series counts and describes the MRI study naturally as a variable set rather than a fixed tensor. deep-research-report
+
+A conventional model might say:
+
+“Give me exactly one sagittal, one coronal and one axial series.”
+
+But what happens if:
+
+the preferred sagittal series is missing?
+
+there are two useful sagittal series?
+
+the hospital used a slightly different protocol?
+
+a series has a different description?
+
+there are five useful series rather than three?
+
+That is the research problem.
+
+4. Central research question
+
+Can a knee MRI model that treats an examination as a variable set of typed MRI series remain more robust to missing and heterogeneous acquisitions than a model that assumes a fixed set of canonical series?
+
+This is directly based on the research report's proposed question. RSNA Knee Abnormality Detection…
+
+The key phrase is:
+
+robustness to missing MRI evidence
+
+The goal is not primarily:
+
+“Can we get 0.5% more Kaggle AUC?”
+
+It is:
+
+“When the MRI examination changes from the ideal protocol, which model fails more gracefully?”
+
+5. The hypothesis
+
+A conventional system might use:
+
+Sagittal
+   +
+Coronal
+   +
+Axial
+   ↓
+Prediction
+
+KneeSet would instead use:
+
+Whatever usable series are available
+           ↓
+Understand each series type
+           ↓
+Encode each series
+           ↓
+Combine the variable set
+           ↓
+Prediction
+
+During training we deliberately remove some series from some studies.
+
+This teaches the model:
+
+“Do not become completely dependent on one exact protocol.”
+
+So the hypothesis is:
+
+A model trained to aggregate a variable set of MRI series, while being deliberately exposed to missing series during training, will lose less performance when important series are absent than a conventional fixed-series model.
+
+The research report makes the same distinction: success could mean similar ordinary AUROC but significantly better performance after series are removed. RSNA Knee Abnormality Detection…
+
+6. Why this is interesting scientifically
+
+The hidden assumption in many models is:
+
+Every study has approximately the same required inputs.
+
+But real clinical MRI is heterogeneous.
+
+The system should instead model:
+
+X
+i
+	​
+
+={S
+i1
+	​
+
+,S
+i2
+	​
+
+,...,S
+im
+i
+	​
+
+	​
+
+}
+
+where the number of series m
+i
+	​
+
+ can differ from patient to patient.
+
+That changes the problem substantially.
+
+The AI needs to answer three things:
+
+What series do I have?
+
+What information does each series contain?
+
+How should I combine whatever evidence is available?
+
+This is not equivalent to simply increasing the number of CNN inputs.
+
+7. Research contribution
+
+The contribution should be phrased narrowly:
+
+Existing knee MRI systems commonly rely on fixed or selected imaging series, but such assumptions can be fragile under heterogeneous clinical acquisition. We will contribute and evaluate a variable-set MRI representation with explicit series-type information and missing-series training, and quantify its robustness relative to fixed-series baselines.
+
+You would not claim:
+
+“We invented multi-view MRI.”
+
+You would not claim:
+
+“We invented attention.”
+
+The research delta is:
+
+protocol robustness under variable and missing acquisition
+
+That is what makes the project defensible.
+
+8. Who would use the system?
+
+The primary user should be:
+
+medical-imaging AI researchers and model developers.
+
+The system helps them answer questions such as:
+
+Which MRI series does this model depend on?
+
+What happens if the sagittal sequence is unavailable?
+
+Which pathologies are most sensitive to missing evidence?
+
+Is a model robust enough to different study configurations?
+
+A radiologist may be a secondary evaluator or expert reviewer.
+
+The system should remain:
+
+research decision-support / model-evaluation software
+
+rather than claiming to be a clinically approved diagnostic product.
+
+9. The complete KneeSet system
+
+I would give it nine major capabilities.
+
+DICOM Study Ingestion and Reconstruction — Foundation engineering. The system accepts an actual knee MRI examination, reconstructs its study → series → slices hierarchy, validates the files, orders slices correctly, and extracts relevant acquisition metadata. This is essential because the research problem exists specifically at the series level, not in pre-exported JPG images.
+
+MRI Series Characterization — Supporting AI / domain processing. For every series, the system determines robust properties such as anatomical orientation—sagittal, coronal, axial—and, where sufficiently reliable, sequence characteristics such as fluid-sensitive or other acquisition families. The research report specifically recommends using DICOM metadata and geometry rather than trusting SeriesDescription alone. deep-research-report
+
+Variable-Series Study Representation — Core research. Instead of forcing every examination into three predetermined slots, KneeSet creates a representation from whatever usable series are present. Each series is encoded separately and then combined through a permutation-invariant aggregation mechanism such as mean pooling, attention pooling or a small set model. This is the core structural difference from the baseline.
+
+Series-Type-Aware Fusion — Core research. The system does not treat every series as interchangeable. It attaches information such as orientation/sequence type to the image representation so that the model can distinguish, conceptually, “this evidence came from a sagittal series” from “this evidence came from an axial series.” The report explicitly proposes plane and sequence-type embeddings as part of this design. RSNA Knee Abnormality Detection…
+
+Missing-Series Robustness Training — Core research. During training, one or more MRI series are randomly removed. The model must still make predictions from the remaining evidence. This is analogous to intentionally training a system under partial sensor failure so it does not become dependent on one exact input configuration.
+
+Twelve-Abnormality MRI Analysis — Supporting AI. The aggregated study representation produces probabilities for the same 12 RSNA abnormalities. The purpose of this feature is to give the robustness research a meaningful downstream medical-imaging task; the 12-label classifier itself is not the novelty.
+
+Protocol Stress-Testing Engine — Core research/evaluation. The system can deliberately simulate degraded examinations: remove one preferred series, remove all series from one plane, keep only one or two planes, randomly remove a fraction of series, or vary the number of usable inputs. It then measures exactly how performance degrades.
+
+Series Contribution and Evidence Explorer — User-facing analytical capability. For an individual study, the researcher can inspect which series were available, how the system classified them, which were used, and how the prediction changes when one is removed. This makes the robustness question visible rather than hiding everything behind an aggregate AUC.
+
+Experiment, Evaluation and Deployable Inference Workspace — Engineering/analytical capability. The system stores model versions, experiment configuration, preprocessing settings, baseline versus proposed results, robustness curves, compute cost and inference history, while also providing a deployable mode where an operator can supply a new DICOM study and receive 12 predictions regardless of whether the study contains the “ideal” series configuration.
+
+10. Feature coherence
+
+The system has one research core:
+
+Series characterization
+        ↓
+Variable-set representation
+        ↓
+Series-aware fusion
+        ↓
+Missing-series training
+        ↓
+Robustness evaluation
+
+The remaining features support that question:
+
+DICOM ingestion
+        ↓
+   research core
+        ↓
+12-label prediction
+        ↓
+stress testing
+        ↓
+evidence review
+        ↓
+deployment
+
+So this does not become:
+
+classifier + segmentation + chatbot + report generation + unrelated explainability.
+
+Every feature asks some version of:
+
+How does the model reason when the MRI protocol changes or information is missing?
+
+11. What does the AI model look like?
+
+You do not need a giant 3D transformer.
+
+A clean architecture could be:
+
+MRI Study
+│
+├── Series A ──► Series Encoder ──► Vector A
+│
+├── Series B ──► Series Encoder ──► Vector B
+│
+├── Series C ──► Series Encoder ──► Vector C
+│
+└── Series D ──► Series Encoder ──► Vector D
+                                  │
+              Series-type info ──┤
+                                  ↓
+                         Set Aggregator
+                                  ↓
+                         Study Representation
+                                  ↓
+                         12 Predictions
+
+A “vector” here simply means:
+
+a compact numerical summary produced by the image model.
+
+The set aggregator's job is:
+
+“I may receive two series, five series or eight series. Combine whatever evidence I have.”
+
+12. How a series itself gets encoded
+
+Each MRI series contains many slices:
+
+Series
+  │
+  ├── Slice 1
+  ├── Slice 2
+  ├── Slice 3
+  ├── ...
+  └── Slice N
+
+A practical undergraduate approach could be:
+
+Selected slices
+      ↓
+2D / 2.5D image encoder
+      ↓
+Slice representations
+      ↓
+Pooling / attention
+      ↓
+One series representation
+
+Then the study model combines the multiple series representations.
+
+This gives two levels of reasoning:
+
+slices→series
+
+and then:
+
+series→study.
+
+That structure itself gives substantial technical depth.
+
+13. What is “series dropout”?
+
+Suppose a training study contains:
+
+Sagittal A
+Sagittal B
+Coronal A
+Axial A
+Axial B
+
+Sometimes during training we might deliberately give the model:
+
+Sagittal A
+Coronal A
+Axial A
+
+Another time:
+
+Sagittal A
+Axial A
+Axial B
+
+Another:
+
+Sagittal B
+Coronal A
+
+The correct label has not changed.
+
+Only the available evidence has changed.
+
+Over time the model learns:
+
+“I should use all available information, but I should not collapse if a particular acquisition disappears.”
+
+That is the key training intervention.
+
+14. Baseline versus proposed model
+
+This experiment needs to be extremely controlled.
+
+Baseline
+
+A conventional fixed-input model:
+
+Selected sagittal
+        +
+Selected coronal
+        +
+Selected axial
+        ↓
+     classifier
+
+If a required input is missing, the pipeline must use an explicit predefined fallback.
+
+Proposed KneeSet model
+All valid available series
+           ↓
+series characterization
+           ↓
+typed variable-set aggregation
+           ↓
+classifier
+
+trained with deliberate series dropout.
+
+The research report suggests additional baselines such as single-series, three-series mean/logit fusion, all-series simple averaging, attention without metadata, and a typed-set model without dropout. deep-research-report
+
+15. The experiment is not “who gets the highest AUC?”
+
+First evaluate both systems normally.
+
+Suppose:
+
+Normal complete studies
+
+Fixed model     AUROC = 0.84
+KneeSet         AUROC = 0.84
+
+At first glance:
+
+no improvement.
+
+Now remove a preferred sequence.
+
+Hypothetical result:
+
+Missing preferred series
+
+Fixed model     AUROC = 0.76
+KneeSet         AUROC = 0.82
+
+Now there is an important finding.
+
+The model did not necessarily become better in perfect conditions.
+
+It became less fragile.
+
+That is exactly why the report states that the research contribution should be robustness rather than only IID validation AUC. deep-research-report
+
+16. Research methodology
+
+You would conduct several controlled experiments.
+
+Experiment A — Fixed versus variable representation
+
+Compare:
+
+Fixed three-series
+
+against:
+
+Variable-set model.
+
+Question:
+
+Does simply accepting variable inputs help?
+
+Experiment B — Does series-type information matter?
+
+Compare:
+
+Variable set without metadata
+
+against:
+
+Variable set + plane/sequence information.
+
+Question:
+
+Does knowing what kind of MRI evidence each representation came from matter?
+
+Experiment C — Does series dropout matter?
+
+Compare:
+
+KneeSet without dropout
+
+against:
+
+KneeSet with dropout.
+
+This isolates the contribution of robustness training.
+
+Experiment D — Remove evidence at test time
+
+Create controlled perturbations.
+
+For example:
+
+Full study
+↓
+Remove one preferred series
+↓
+Remove all axial series
+↓
+Remove all coronal series
+↓
+Retain only two planes
+↓
+Retain one plane
+
+Then measure degradation.
+
+17. Main evaluation metrics
+
+You still use ordinary:
+
+AUROC;
+
+AUPRC;
+
+per-pathology metrics.
+
+But the important additional metric becomes something like:
+
+ΔAUC=AUC
+full
+	​
+
+−AUC
+missing
+	​
+
+.
+
+Smaller degradation is better.
+
+The research report explicitly proposes measuring performance as series are removed and comparing inference cost as well. RSNA Knee Abnormality Detection…
+
+You could also produce a:
+
+Robustness curve
+
+Conceptually:
+
+Performance
+100% |●
+     | \
+     |  ● KneeSet
+     |   \
+     |    ●
+     |
+     |  Fixed model
+     |   \
+     |    \
+     |     ●
+     +---------------------
+       More series missing
+
+That could become one of the most effective visuals in the final defense.
+
+18. Pathology-specific analysis
+
+This system creates another useful research output.
+
+You can ask:
+
+Which abnormalities depend most strongly on which MRI evidence?
+
+For example—hypothetically:
+
+ACL:
+strong sensitivity to missing sagittal evidence
+
+Effusion:
+relatively robust across multiple sequences
+
+Fracture:
+benefits strongly from certain fluid-sensitive series
+
+Those are examples only; the research would discover the actual patterns.
+
+The report explicitly includes:
+
+“Which abnormalities depend most on specific planes/sequences?”
+
+as a secondary research question. deep-research-report
+
+That gives the final research considerably more depth than a single macro score.
+
+19. End-to-end system workflow
+
+During dataset preparation:
+
+Raw DICOM study
+        ↓
+Study reconstruction
+        ↓
+Series metadata + geometry extraction
+        ↓
+Series characterization
+        ↓
+Slice preprocessing
+        ↓
+Cached series representations
+
+During training:
+
+Study
+   ↓
+Optional series dropout
+   ↓
+Encode available series
+   ↓
+Attach series-type information
+   ↓
+Variable-set aggregation
+   ↓
+12-label prediction
+   ↓
+Training loss
+
+During research evaluation:
+
+Validation study
+      ↓
+Full-protocol prediction
+      ↓
+Remove selected evidence
+      ↓
+Run again
+      ↓
+Measure performance drop
+      ↓
+Compare baseline vs KneeSet
+
+During final deployed use:
+
+New DICOM study
+      ↓
+Inspect available series
+      ↓
+Characterize them
+      ↓
+Use whatever valid evidence exists
+      ↓
+12-label predictions
+      ↓
+Show series/evidence summary
+20. User-facing system
+
+The interface should be a medical-imaging research workspace, not a hospital application.
+
+A researcher could open a study and see something like:
+
+Study XYZ
+
+Available Series
+✓ Sagittal PD FS
+✓ Sagittal T1
+✓ Coronal PD FS
+✓ Axial PD FS
+✗ Expected secondary coronal sequence absent
+
+Prediction
+ACL             0.81
+MCL             0.12
+Medial Meniscus 0.76
+...
+
+Robustness Analysis
+
+Full study                ACL: 0.81
+Without sagittal PD FS    ACL: 0.62
+Without axial             ACL: 0.79
+Only sagittal             ACL: 0.74
+
+That directly communicates the research idea to the FYP panel.
+
+21. High-level software architecture
+
+Again, no need for enterprise microservices.
+
+I would use:
+
+              Web Research Interface
+                      │
+                      ▼
+               Application API
+               /             \
+              /               \
+     Study Management       Experiment Management
+            │                        │
+            ▼                        ▼
+      DICOM Pipeline           ML/GPU Worker
+            │                   /          \
+            ▼                  /            \
+   Series Characterizer   Training       Inference
+            │                 │              │
+            └─────────────────┴──────────────┘
+                              │
+                              ▼
+                    Evaluation Subsystem
+                              │
+                   ┌──────────┴──────────┐
+                   ▼                     ▼
+              Metadata DB         Artifact Storage
+
+A modular monolith plus GPU worker is sufficient.
+
+FAST explicitly requires a coherent, deployable system, but also warns against complexity that exists merely for appearance. FAST_FYP_Student_Idea_Selection…
+
+22. The CCP
+
+This is arguably even easier to explain visually than KneeWS.
+
+Conflicting requirements
+
+More MRI evidence generally gives more information.
+
+But processing every slice from every series:
+
+costs more compute;
+
+may introduce irrelevant acquisitions;
+
+creates input inconsistency.
+
+Meanwhile restricting the input to a fixed protocol is efficient but brittle.
+
+So there is a real conflict:
+
+standardization + simplicityvscoverage + robustness.
+No obvious solution
+
+There is no universal answer to:
+
+Which series should be selected?
+
+or:
+
+Should every series be included?
+
+or:
+
+How should unknown combinations be aggregated?
+
+These must be experimentally evaluated.
+
+Depth of knowledge
+
+It requires:
+
+MRI sequence understanding;
+
+DICOM geometry;
+
+image preprocessing;
+
+multi-instance learning;
+
+set modeling;
+
+multi-label classification;
+
+robustness evaluation.
+
+Unfamiliar issues
+
+A variable collection of 3D medical-imaging sequences is not routine web/backend development.
+
+Beyond standard practice
+
+A framework may provide:
+
+CNNs;
+
+Transformers;
+
+MONAI transforms.
+
+It does not answer:
+
+How should a variable clinical MRI protocol be represented robustly?
+
+Interdependence
+
+The stages strongly affect one another:
+
+series characterization→series encoding→aggregation→prediction→robustness.
+Ill-defined problem
+
+You initially do not know:
+
+which sequences are important;
+
+which pathology depends on which evidence;
+
+how much evidence is redundant;
+
+how much performance will collapse under missing inputs.
+
+The experiments discover those answers.
+
+That is precisely the type of evidence-driven complexity FAST expects rather than complexity manufactured from additional technologies. FAST_FYP_Student_Idea_Selection…
+
+23. Why this is more than a Kaggle classifier
+
+A normal competition solution asks:
+
+Which series combination produces the highest hidden-test score?
+
+This FYP asks:
+
+How stable is the model when the MRI acquisition protocol itself changes?
+
+That produces a different evaluation regime:
+
+Full protocol
+
+versus:
+
+Controlled missing protocol.
+
+The main output is therefore not merely:
+
+Model X has AUROC 0.84.
+
+It is something like:
+
+Model X performs similarly to the fixed baseline under complete examinations but retains substantially more accuracy when important series are missing, with pathology-specific differences in robustness.
+
+That is an academically much stronger claim.
+
+24. What happens with the radiology reports?
+
+They still have to be dealt with because most training labels come from them.
+
+But this is crucial:
+
+Report processing should not become KneeSet's research contribution.
+
+Use one fixed weak-label pipeline across all imaging experiments.
+
+For example:
+
+One pseudo-label dataset
+       ↓
+       ├── Train baseline fixed model
+       │
+       └── Train KneeSet
+
+Both models receive exactly the same supervision.
+
+That ensures any difference comes from:
+
+MRI representation and robustness
+
+rather than label quality.
+
+The attached report explicitly recommends keeping the same report-derived labels across architecture comparisons so weak-label quality is not an uncontrolled variable. deep-research-report
+
+This separation is important.
+
+25. Minimum viable research
+
+If some of the sophisticated modeling fails, you still have a strong fallback.
+
+The minimum research could become:
+
+A rigorous empirical study of how knee MRI models depend on different series and planes and how their performance degrades under missing acquisitions.
+
+Even before inventing the perfect set model, you can compare:
+
+single series
+vs
+three selected series
+vs
+all available series
+
+and systematically remove evidence.
+
+The report explicitly says that such a benchmark would itself constitute a useful empirical thesis. RSNA Knee Abnormality Detection…
+
+That makes this project resilient to a negative model result.
+
+26. Main technical risk
+
+The biggest one is:
+
+Series classification / normalization
+
+A human-readable name might say:
+
+SAG PD FS
+
+at one center and something quite different at another.
+
+So you cannot necessarily rely entirely on:
+
+SeriesDescription
+
+You may need:
+
+ImageOrientationPatient;
+
+geometry;
+
+scanning sequence;
+
+sequence name;
+
+image type;
+
+protocol name;
+
+other DICOM attributes.
+
+The research report explicitly identifies DICOM sequence classification as a potentially substantial engineering problem. RSNA Knee Abnormality Detection…
+
+27. Fallback if sequence typing becomes too difficult
+
+Do not attempt a perfect radiological sequence ontology.
+
+Reduce the problem to robust properties.
+
+For example:
+
+Sagittal
+Coronal
+Axial
+Other / Unknown
+
+Then test variable-set learning using plane information only.
+
+The report specifically recommends this fallback: ignore fine-grained sequence identity and retain reliably inferred anatomical plane plus variable-set aggregation. RSNA Knee Abnormality Detection…
+
+That is still a valid and substantial research project.
+
+28. One-year scope
+
+This has enough work for a full year without requiring a research lab.
+
+Proposal stage
+
+The critical POC should prove:
+
+Can we automatically reconstruct and characterize
+the heterogeneous MRI series well enough to make
+the research experiment possible?
+
+Process perhaps dozens/hundreds of studies and produce:
+
+series count distribution;
+
+orientation distribution;
+
+metadata quality;
+
+percentage successfully characterized;
+
+examples of inconsistent protocols.
+
+That is the correct technical spike.
+
+FAST specifically expects the proposal POC to test the highest-risk assumption rather than just demonstrate an interface. FAST_FYP_Student_Idea_Selection…
+
+FYP-1
+
+Build:
+
+DICOM pipeline;
+
+series taxonomy;
+
+fixed-series baseline;
+
+first variable-set model;
+
+end-to-end research application;
+
+first deployment.
+
+FYP-2
+
+Complete:
+
+series dropout;
+
+controlled perturbation experiments;
+
+ablations;
+
+pathology-specific robustness;
+
+system testing;
+
+optimization;
+
+user/proxy acceptance;
+
+final deployment.
+
+29. Final panel demonstration
+
+This could be especially strong.
+
+First show a normal MRI examination containing several series.
+
+Then show KneeSet automatically identifying:
+
+2 sagittal
+2 coronal
+1 axial
+
+and producing its 12 predictions.
+
+Then physically disable/remove one important series in the interface.
+
+Show:
+
+Fixed model:
+prediction changes dramatically
+
+KneeSet:
+prediction changes modestly
+
+Then show the global experiment:
+
+                Full      -1 Series     -1 Plane
+Fixed model     0.84         0.78          0.72
+KneeSet         0.84         0.82          0.80
+
+Those numbers would of course come from your actual experiment.
+
+Then show a pathology-specific robustness graph.
+
+Finally load a new MRI with a non-identical protocol and demonstrate that the application can process whatever usable series it receives.
+
+That is a very clear research story for a panel.
+
+30. Why this could be an especially good FYP
+
+KneeSet has several advantages over KneeWS.
+
+It is much more visibly a medical-imaging/computer-vision system.
+
+The complexity is easy to demonstrate:
+
+“MRI studies don't all look structurally identical.”
+
+The end product is visually strong.
+
+You can show the actual study structure, series, slices, missing input and performance degradation.
+
+It also avoids making the FYP heavily dependent on:
+
+multilingual LLMs;
+
+prompt engineering;
+
+the statistical adequacy of only 58 gold labels for calibrating report semantics.
+
+And the research report itself describes this as the strongest imaging-centric project, with high novelty, high technical difficulty, good feasibility and strong publication potential. RSNA Knee Abnormality Detection…
+
+31. Where KneeSet is weaker than KneeWS
+
+There are important disadvantages.
+
+The largest one is engineering risk.
+
+KneeWS can start doing useful weak-label experiments before the entire MRI pipeline is mature.
+
+KneeSet cannot.
+
+Its research depends heavily on understanding the DICOM series correctly.
+
+Another issue is that KneeSet needs the report-derived labels as upstream training supervision anyway, so you still need some stable label-generation approach—even though it is not your research contribution.
+
+It is also more GPU-heavy.
+
+And you have to be disciplined not to turn the project into:
+
+“Try ten MRI architectures and report which one wins.”
+
+The thesis must remain about protocol robustness.
+
+32. KneeWS versus KneeSet
+
+Conceptually, they investigate different failures:
+
+KneeWS
+
+MRI ← questionable labels ← report
+                ↑
+          research here
+
+versus:
+
+KneeSet
+
+Variable MRI series → model → prediction
+        ↑
+   research here
+
+KneeWS asks:
+
+Can we trust the training information?
+
+KneeSet asks:
+
+Can we trust the model when the available imaging information changes?
+
+I would currently characterize them this way:
+
+KneeWS: lower implementation risk, cleaner research experiment, stronger weak-supervision/data-science identity.
+
+KneeSet: higher implementation risk, stronger CV/medical-imaging identity, stronger visual demonstration, probably stronger system complexity.
+
+Both can satisfy FAST's central requirement that a research-derived FYP must end in an operable, evaluated, deployable system rather than only a notebook. FAST_FYP_Student_Idea_Selection…
+
+33. Registration-ready definition
+
+Title: A Protocol-Robust Multi-Series System for Multi-Label Knee MRI Analysis
+
+Problem: Existing knee MRI models commonly rely on a predefined set of imaging series, while real clinical MRI examinations may contain heterogeneous and partially missing acquisition protocols. Such fixed-input assumptions can cause unpredictable degradation when expected evidence is unavailable.
+
+Research objective: Determine whether representing a knee MRI examination as a typed variable set of series and explicitly training under missing-series conditions improves robustness compared with fixed canonical-series models.
+
+Research contribution: A protocol-aware variable-series representation and missing-series training strategy, evaluated using controlled MRI evidence removal, pathology-specific robustness analysis and standard multi-label classification metrics.
+
+System objective: Build a deployable research platform capable of ingesting heterogeneous DICOM knee MRI studies, characterizing available acquisitions, performing variable-series abnormality analysis, simulating missing-protocol conditions and quantifying model robustness.
+
+Central CCP: The system must produce stable multi-label MRI predictions from heterogeneous variable-size examinations while balancing evidence coverage, computational cost and dependence on individual MRI acquisitions, with no predetermined optimal strategy for selecting or combining series.
+
+34. My current assessment
+
+I would keep both KneeWS and KneeSet alive as serious registration candidates.
+
+They optimize for different kinds of FYP.
+
+If your priority is:
+
+cleanest research methodology + lowest risk of experimental failure
+
+KneeWS is stronger.
+
+If your priority is:
+
+medical imaging / computer vision depth + stronger visual system + more obvious engineering complexity
+
+KneeSet may actually be more attractive.
+
+The next most worthwhile system to develop after this one would be the privileged multimodal learning system, because that would give you a third fundamentally different choice:
+
+KneeWS=How should reports become supervision?
+KneeSet=How should variable MRI evidence be represented?
+Multimodal system=Should reports become labels at all, or should the MRI model learn directly from the report semantics?
+
+Those three form a strong, non-overlapping shortlist from the research report. RSNA Knee Abnormality Detection…
+
+Sources
+Sources
+
+one
+
+Convert to writing block
+Edit
+
+one
+
+ChatGPT is AI and can make mistakes.

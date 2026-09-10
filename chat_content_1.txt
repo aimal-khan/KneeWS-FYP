@@ -1,0 +1,1943 @@
+Skip to content
+Chat history
+New chat
+Images
+Plugins
+Deep research
+See plans and pricing
+Settings
+Help
+
+Get responses tailored to you
+
+Log in to get answers based on saved chats, plus create images and upload files.
+
+Log in
+ChatGPT
+Log in
+Sign up for free
+
+This is a copy of a shared ChatGPT chat. It won't be added to memory.
+
+Report conversation
+Monday 1:40 PM
+Uploaded a file
+Uploaded a file
+# Role
+
+Act as a senior **AI/ML research scientist, medical-imaging systems architect, and Final Year Project advisor** with experience in:
+
+- medical imaging and MRI,
+- computer vision,
+- multimodal AI,
+- clinical decision-support systems,
+- machine learning research methodology,
+- end-to-end AI product/system design,
+- software architecture,
+- academic FYP evaluation,
+- Complex Computing Problems (CCP),
+- and converting research contributions into demonstrable software systems.
+
+Your job is not merely to suggest an ML model.
+
+Your job is to help design a **complete, coherent, research-oriented Final Year Project system** that:
+
+1. is grounded in the attached RSNA Knee Abnormality Detection research report,
+2. satisfies the attached CCP/FYP guidelines,
+3. contains approximately **8–10 meaningful system features**,
+4. has sufficient technical and research depth for a **one-year FYP**,
+5. is demonstrable to an FYP panel as a complete working system,
+6. and still has a clear central research contribution rather than becoming an arbitrary collection of features.
+
+---
+
+# Attached Sources
+
+Two primary documents are attached.
+
+## Document A — Research Report
+
+This is the detailed research report produced from prior Deep Research on:
+
+**RSNA Knee Abnormality Detection**
+
+It contains, among other things:
+
+- dataset analysis,
+- challenge analysis,
+- literature review,
+- research gaps,
+- candidate research directions,
+- recommended research problems,
+- feasibility considerations,
+- and possible R&D studies.
+
+Treat this report as the primary source for understanding the **research landscape and candidate research contribution**.
+
+---
+
+## Document B — CCP / FYP Guidelines
+
+This is the official guideline document that defines the criteria our FYP must satisfy.
+
+Treat this document as a **hard constraint**.
+
+A project that sounds scientifically interesting but does not satisfy the CCP requirements is not acceptable.
+
+Do not rely on your generic understanding of "CCP" when the attached document provides a specific institutional definition.
+
+Extract the exact criteria from the supplied guidelines and evaluate every proposed project against those actual criteria.
+
+---
+
+# Context
+
+I need to register my FYP.
+
+My supervisor recommended starting with a novel, complex, relatively new dataset and extracting a research problem from it.
+
+Following that advice, I investigated the RSNA Knee Abnormality Detection challenge and dataset through Deep Research.
+
+I now have a research report describing:
+
+- the dataset,
+- existing work,
+- research opportunities,
+- gaps,
+- and possible studies.
+
+However, an FYP cannot consist only of an isolated ML experiment or research paper.
+
+I need to build a **complete system around the selected research problem**.
+
+The resulting FYP should be substantial enough to represent approximately **one academic year of work** and should have roughly **8–10 meaningful features/capabilities**.
+
+At the same time, those features must form a coherent system around the research contribution.
+
+I do NOT want:
+
+> "train a classifier + add login + dashboard + CRUD + export + notifications"
+
+simply to inflate the feature count.
+
+The FYP should have genuine computational depth.
+
+---
+
+# Primary Objective
+
+Using the attached research report and CCP guidelines, determine:
+
+> **What complete FYP system should be built around the strongest feasible research direction identified in the RSNA Knee Abnormality Detection research?**
+
+The final recommendation should integrate:
+
+**Research problem → AI/ML pipeline → system capabilities → user workflow → software architecture → evaluation → CCP compliance**
+
+into one cohesive project.
+
+---
+
+# Critical Principle
+
+The project should have **one central identity**.
+
+Do not combine several unrelated research gaps simply because each sounds interesting.
+
+For example, do not arbitrarily combine:
+
+- multilingual NLP,
+- domain adaptation,
+- explainability,
+- segmentation,
+- federated learning,
+- report generation,
+- anomaly detection,
+
+unless they serve the same clearly defined research question and system objective.
+
+Prefer:
+
+> one strong central research contribution + several supporting system capabilities
+
+over:
+
+> many disconnected ML experiments.
+
+---
+
+# Phase 1 — Read and Extract the CCP Requirements
+
+Before designing anything, inspect the attached CCP/FYP guideline document carefully.
+
+Extract:
+
+- the formal definition of a CCP,
+- all mandatory criteria,
+- expected characteristics,
+- complexity requirements,
+- knowledge areas involved,
+- engineering considerations,
+- constraints,
+- evaluation expectations,
+- documentation requirements,
+- and any examples or rejection conditions provided.
+
+Separate:
+
+### Mandatory requirements
+
+Requirements that the project must satisfy.
+
+### Strongly desirable requirements
+
+Criteria that strengthen CCP classification.
+
+### Irrelevant/non-applicable requirements
+
+Anything that does not apply to this type of project.
+
+Do not paraphrase away important institutional terminology.
+
+Use the wording and concepts from the official document where relevant.
+
+---
+
+# Phase 2 — Extract the Strongest Research Candidates
+
+Read the attached RSNA research report completely.
+
+Identify the strongest candidate research directions it found.
+
+For each serious candidate, summarize:
+
+- research question,
+- research gap,
+- proposed contribution,
+- expected methodology,
+- dataset requirements,
+- technical difficulty,
+- compute requirements,
+- medical-domain dependencies,
+- experimental risk,
+- publication potential,
+- FYP feasibility.
+
+Do not independently invent completely new research directions at this stage unless the report clearly leaves an important opportunity unexplored.
+
+The research report should remain the basis of the project.
+
+---
+
+# Phase 3 — Determine What Can Become a Complete System
+
+Evaluate which research directions naturally support the construction of an end-to-end system.
+
+Ask of each candidate:
+
+> What would a real user actually do with this system?
+
+Potential users might include, depending on what the research supports:
+
+- radiologists,
+- researchers,
+- clinicians,
+- medical-imaging analysts,
+- dataset curators,
+- AI model developers,
+
+but do not invent a clinical workflow unsupported by the research.
+
+Determine whether each candidate can support:
+
+- meaningful input,
+- meaningful processing,
+- multiple AI/system components,
+- meaningful output,
+- visualization,
+- interaction,
+- analysis,
+- evaluation,
+- persistence/history where appropriate,
+- and a convincing end-to-end demonstration.
+
+Reject candidates that can only produce a notebook experiment unless there is a credible way to turn them into a coherent research platform.
+
+---
+
+# Phase 4 — Generate 3–5 Coherent FYP System Concepts
+
+Based on the strongest research directions, propose **3–5 alternative complete FYP concepts**.
+
+Each concept must have:
+
+## 1. Project identity
+
+One sentence answering:
+
+> What is this system?
+
+## 2. Target user
+
+Who would use it?
+
+## 3. Core problem
+
+What problem does it solve?
+
+## 4. Research contribution
+
+What scientific question is actually being investigated?
+
+## 5. System contribution
+
+What useful software/system is built around that research?
+
+## 6. Dataset role
+
+How is the RSNA dataset used?
+
+## 7. End-to-end workflow
+
+Describe:
+
+**Input → preprocessing → AI analysis → research-specific processing → output → user interaction**
+
+## 8. Major technical components
+
+Such as, where justified:
+
+- DICOM ingestion,
+- MRI preprocessing,
+- series identification,
+- model inference,
+- multimodal fusion,
+- report processing,
+- uncertainty analysis,
+- localization,
+- visualization,
+- experiment tracking,
+- backend services,
+- model serving,
+- data storage,
+- frontend application.
+
+Only include components that serve the project objective.
+
+---
+
+# Phase 5 — Design 8–10 Meaningful Features for Each Strong Candidate
+
+For each of the strongest system concepts, derive approximately **8–10 substantial features/capabilities**.
+
+A feature should represent a meaningful technical capability of the system.
+
+Do NOT count trivial UI functionality separately just to increase the number.
+
+Examples of things that ordinarily should NOT count as major features:
+
+- login,
+- logout,
+- profile editing,
+- dark mode,
+- basic CRUD,
+- static pages,
+- simple PDF export,
+- password reset.
+
+These may exist in the eventual product but should not be presented as the intellectual substance of the FYP.
+
+Prefer capabilities involving:
+
+- non-trivial AI processing,
+- medical-image handling,
+- multimodal information,
+- analysis,
+- model comparison,
+- uncertainty,
+- visualization,
+- intelligent retrieval,
+- workflow automation,
+- research evaluation,
+- or meaningful system integration.
+
+---
+
+# Feature Coherence Requirement
+
+For every proposed feature, explicitly answer:
+
+> How does this feature support the central research/system objective?
+
+If there is no strong answer, remove the feature.
+
+The 8–10 features must behave like parts of **one product**, not 8–10 mini-projects.
+
+---
+
+# Feature Depth Requirement
+
+Classify each feature as:
+
+- **Core research**
+- **Supporting AI capability**
+- **System/engineering capability**
+- **User-facing analytical capability**
+
+The final system should contain a sensible balance.
+
+It should not contain 10 separate research problems.
+
+---
+
+# Example of the Desired Level of Thinking
+
+Suppose the selected research question were about uncertainty-aware knee MRI abnormality detection.
+
+A coherent system might conceptually revolve around:
+
+1. MRI study ingestion,
+2. DICOM/series processing,
+3. multi-abnormality inference,
+4. uncertainty estimation,
+5. confidence-based case prioritization,
+6. visual evidence/localization,
+7. study-level interactive review,
+8. model confidence/calibration analytics,
+9. research comparison between baseline and proposed method.
+
+That would represent one coherent system.
+
+In contrast:
+
+1. classifier,
+2. chatbot,
+3. appointment scheduling,
+4. patient registration,
+5. billing,
+6. report generation,
+7. email alerts,
+8. admin CRUD,
+
+would be artificial feature inflation and should be rejected.
+
+The above example is illustrative only. Do not assume uncertainty estimation should be selected unless the attached research supports it.
+
+---
+
+# Phase 6 — Explicit CCP Mapping
+
+This phase is critical.
+
+For every serious project concept, create a **CCP compliance analysis** based specifically on the attached guideline.
+
+For every relevant CCP criterion:
+
+1. quote or accurately summarize the requirement,
+2. identify which part of the proposed system satisfies it,
+3. explain why,
+4. identify any weakness,
+5. identify what would need to be added or changed to make compliance stronger.
+
+Do not merely say:
+
+> "Yes, it satisfies CCP."
+
+Demonstrate the mapping.
+
+---
+
+# Complexity Analysis
+
+Explain where the genuine complexity comes from.
+
+Potential sources may include, if actually relevant:
+
+- heterogeneous MRI studies,
+- DICOM processing,
+- multi-series reasoning,
+- 3D medical imaging,
+- multimodal data,
+- weak/noisy supervision,
+- multilingual text,
+- high-dimensional data,
+- model uncertainty,
+- non-trivial evaluation,
+- domain generalization,
+- computation constraints,
+- conflicting objectives,
+- system integration,
+- model serving,
+- medical interpretability,
+- performance/scalability constraints.
+
+Explicitly distinguish:
+
+### Research complexity
+
+Complexity of answering the scientific question.
+
+### Computational complexity
+
+Compute, storage, algorithms, image processing, etc.
+
+### Engineering complexity
+
+Building and integrating the complete system.
+
+### Domain complexity
+
+MRI/radiology-specific requirements and ambiguity.
+
+---
+
+# Phase 7 — Evaluate One-Year FYP Scope
+
+Assume this is a **one-year undergraduate FYP**.
+
+Evaluate whether each project has enough work for that duration without becoming unrealistic.
+
+The project should be:
+
+- larger than a semester ML assignment,
+- larger than a Kaggle notebook,
+- larger than a simple inference web app,
+- technically substantial,
+- research-oriented,
+- demonstrable,
+- but achievable by undergraduate students.
+
+Identify for each concept:
+
+### Too little scope?
+
+Could it realistically be completed in only a few weeks?
+
+### Appropriate scope?
+
+Does it support progressive development and research over the year?
+
+### Too much scope?
+
+Does it effectively require a research lab, hospital partnership, or large engineering team?
+
+---
+
+# Phase 8 — Consider Dataset Availability Constraints
+
+The RSNA competition may have constraints around:
+
+- dataset access,
+- competition duration,
+- test labels,
+- Kaggle infrastructure,
+- redistribution,
+- licensing,
+- external deployment.
+
+Analyze these carefully.
+
+Distinguish between:
+
+- using the data during research/training,
+- demonstrating the system using permitted samples,
+- hosting data,
+- redistributing data,
+- deploying a public application.
+
+Do not assume that competition data can be redistributed or publicly hosted.
+
+Design the system so that the FYP remains demonstrable within legitimate dataset-access constraints.
+
+---
+
+# Phase 9 — Architecture of the Strongest Concepts
+
+For the top concepts, describe a realistic high-level architecture.
+
+Possible layers may include:
+
+### Data layer
+
+- dataset storage,
+- DICOM handling,
+- metadata,
+- derived artifacts,
+- research experiment results.
+
+### AI pipeline
+
+- preprocessing,
+- training,
+- inference,
+- research-specific method,
+- evaluation.
+
+### Model-serving layer
+
+If appropriate.
+
+### Backend/application layer
+
+Responsibilities and APIs.
+
+### Frontend
+
+Only where useful for demonstrating or interacting with the system.
+
+### Research/evaluation subsystem
+
+How experiments, baselines, ablations, metrics, calibration, etc. are evaluated.
+
+Do not over-engineer this into enterprise microservices unless there is a genuine reason.
+
+A well-structured modular monolith or simple service architecture may be preferable for an FYP.
+
+---
+
+# Phase 10 — Define the Demonstration Story
+
+For each top concept, explain what I could show the FYP panel during a final demonstration.
+
+Give a realistic flow such as:
+
+1. user supplies/selects a knee MRI study,
+2. system parses the study,
+3. system identifies available MRI series,
+4. AI pipeline processes the study,
+5. research method performs its specialized analysis,
+6. predicted abnormalities are presented,
+7. evidence/confidence/comparison is presented,
+8. user explores results,
+9. system demonstrates the research contribution relative to the baseline.
+
+Adapt this to the chosen concept.
+
+The demo should make the project's technical depth understandable without requiring the panel to inspect notebooks.
+
+---
+
+# Phase 11 — Research vs Product Boundary
+
+For every project, explicitly distinguish:
+
+## Research contribution
+
+What belongs in the thesis/research paper?
+
+## Product/system contribution
+
+What is built so the research becomes a usable and demonstrable system?
+
+## Supporting engineering
+
+What exists only to make the system operational?
+
+This distinction is important.
+
+Do not claim ordinary software engineering as research novelty.
+
+Likewise, do not build a system in which the central research contribution is invisible.
+
+---
+
+# Phase 12 — Compare and Rank the Concepts
+
+Rank the proposed concepts using:
+
+1. CCP compliance,
+2. strength of research question,
+3. scientific novelty,
+4. fit with RSNA dataset,
+5. feasibility,
+6. one-year scope,
+7. technical depth,
+8. system coherence,
+9. quality of 8–10 features,
+10. demo/presentation potential,
+11. measurable evaluation,
+12. compute feasibility,
+13. dependency on medical experts,
+14. risk of project failure,
+15. publication potential.
+
+Do not select the most complicated project automatically.
+
+The strongest FYP is the one with the best combination of:
+
+> **research quality + CCP depth + coherent system + feasibility + demonstrability**
+
+---
+
+# Phase 13 — Fully Design the Recommended Project
+
+After ranking the alternatives, choose **one recommended FYP**.
+
+Develop it substantially further.
+
+Provide:
+
+## Proposed FYP title
+
+Prefer a serious academic/system title rather than a marketing name.
+
+Also provide a short system/project name if useful.
+
+---
+
+## One-sentence description
+
+Explain the project in one sentence.
+
+---
+
+## Problem statement
+
+Precisely define the real problem.
+
+---
+
+## Motivation
+
+Why does this matter?
+
+---
+
+## Research gap
+
+Ground this in the attached research report.
+
+---
+
+## Research question
+
+Provide:
+
+- one primary research question,
+- secondary questions only where necessary.
+
+---
+
+## Hypothesis
+
+Give a falsifiable hypothesis where appropriate.
+
+---
+
+## Research contribution
+
+What new knowledge could the FYP produce?
+
+---
+
+## System objective
+
+What will actually be built?
+
+---
+
+## Target users
+
+Who is the system designed for?
+
+Be careful not to describe it as a clinically approved diagnostic system.
+
+---
+
+# Required Features
+
+Define the recommended **8–10 major features**.
+
+For each feature provide:
+
+### Feature name
+
+### What it does
+
+### User value
+
+### Technical depth
+
+### Research/system role
+
+### Why it belongs in this project
+
+### Dependencies on other features
+
+### Relative implementation difficulty
+
+---
+
+# Feature Dependency Map
+
+Show how the features relate.
+
+Identify:
+
+### Foundation features
+
+Required by almost everything else.
+
+### Core research features
+
+Directly implement/evaluate the research contribution.
+
+### Supporting features
+
+Necessary to create a complete system.
+
+### Presentation/analysis features
+
+Make results understandable and demonstrable.
+
+---
+
+# End-to-End Workflow
+
+Walk through the complete system from:
+
+**MRI input → result**
+
+Include all important processing stages.
+
+---
+
+# Proposed Architecture
+
+Describe:
+
+- frontend,
+- backend,
+- AI/ML pipeline,
+- inference mechanism,
+- data storage,
+- DICOM handling,
+- experiment/evaluation subsystem,
+- model artifacts,
+- relevant external dependencies.
+
+Recommend technologies only where there is enough information to justify them.
+
+Do not lock the project into unnecessary frameworks.
+
+---
+
+# ML Architecture
+
+At a conceptual level specify:
+
+- inputs,
+- preprocessing,
+- representation,
+- baseline model,
+- proposed research method,
+- outputs,
+- loss/objective,
+- evaluation.
+
+Keep baseline and proposed research method clearly separated.
+
+---
+
+# Experimental Design
+
+Specify:
+
+- baseline experiments,
+- proposed method,
+- ablations,
+- train/validation strategy,
+- metrics,
+- robustness/generalization tests where relevant,
+- statistical comparison where appropriate.
+
+The project must be able to answer a **research question**, not merely produce predictions.
+
+---
+
+# Data Pipeline
+
+Describe:
+
+- raw dataset,
+- DICOM processing,
+- metadata,
+- preprocessing,
+- derived datasets,
+- caching,
+- training artifacts,
+- model outputs.
+
+Identify any potentially expensive preprocessing that should be performed offline.
+
+---
+
+# CCP Compliance Matrix
+
+For every mandatory CCP criterion from the provided guideline, give:
+
+- criterion,
+- relevant subsystem/feature,
+- explanation,
+- evidence of complexity,
+- risk of failing the criterion,
+- mitigation.
+
+This should be detailed enough that I could use it when defending the proposal to the FYP panel.
+
+---
+
+# One-Year Scope
+
+Divide the project conceptually into:
+
+## Minimum viable FYP
+
+The smallest version that still constitutes a valid and substantial FYP.
+
+## Target version
+
+The full recommended project.
+
+## Stretch work
+
+Interesting additions only if the core research and system are already complete.
+
+This prevents scope creep.
+
+---
+
+# Risk Analysis
+
+Identify major risks including:
+
+- model performance,
+- dataset restrictions,
+- compute limits,
+- weak labels,
+- medical expertise,
+- preprocessing complexity,
+- FYP timeline,
+- research idea failing experimentally,
+- integration complexity.
+
+For each major risk, provide a fallback.
+
+A negative research result should not automatically cause the entire FYP to fail.
+
+---
+
+# Phase 14 — Panel Rejection Analysis
+
+Act temporarily as a skeptical FYP panel member.
+
+Try to reject the recommended project.
+
+Ask questions such as:
+
+- Is this really a CCP?
+- Is this just a Kaggle competition wrapped in a web application?
+- What is actually novel?
+- What exactly will the students develop?
+- What is technically difficult?
+- Are 8–10 features genuine?
+- Does the system solve one coherent problem?
+- Is the research contribution measurable?
+- Is this medically credible?
+- Is the scope realistic?
+- Is the system simply running a pretrained model?
+- What happens if the proposed research method does not improve results?
+- Why does this require a one-year FYP?
+
+Identify every credible criticism.
+
+Then modify or strengthen the project design where possible to address those criticisms.
+
+Do not hide weaknesses.
+
+---
+
+# Phase 15 — Final Recommendation for Registration
+
+Finish with a concise proposed registration-ready definition containing:
+
+## FYP title
+
+## Problem statement
+
+2–4 paragraphs.
+
+## Research objective
+
+## System objective
+
+## Research contribution
+
+## 8–10 core features
+
+Short descriptions only.
+
+## CCP justification
+
+Concise but directly mapped to the official guidelines.
+
+## Expected outcome
+
+## Why this is a one-year FYP
+
+This section should be suitable as the conceptual basis for discussing registration with my supervisor.
+
+Do not invent formal wording from university forms unless those forms are attached.
+
+---
+
+# Research and Browsing Instructions
+
+The attached documents are the primary sources.
+
+You may perform external research when useful for:
+
+- validating feasibility,
+- checking existing comparable systems,
+- verifying whether a proposed feature/research contribution already exists,
+- checking technical approaches,
+- confirming data-format/tooling considerations,
+- assessing compute feasibility,
+- identifying relevant academic baselines.
+
+However:
+
+- clearly distinguish attached-report conclusions from new external research,
+- do not override the official CCP document with generic definitions,
+- cite external factual claims,
+- prefer peer-reviewed and official sources.
+
+---
+
+# Important Constraints
+
+## Do not turn this into a hospital management system
+
+Features such as:
+
+- appointments,
+- billing,
+- patient administration,
+- generic authentication,
+- doctor profiles,
+
+are irrelevant unless the central project specifically requires them.
+
+---
+
+## Do not artificially inflate the feature count
+
+Eight to ten features means eight to ten **meaningful system capabilities**, not eight to ten pages or CRUD operations.
+
+---
+
+## Do not make every feature a separate research problem
+
+There should preferably be **one central research contribution**.
+
+Other capabilities should support that contribution.
+
+---
+
+## Do not overclaim clinical use
+
+Unless supported by the evidence, frame the application as:
+
+- research decision-support,
+- AI-assisted analysis,
+- educational/research tooling,
+
+rather than a replacement for radiologists or a clinically validated diagnostic product.
+
+---
+
+## Do not over-engineer the software architecture
+
+The intellectual complexity should primarily come from:
+
+- the problem,
+- algorithms,
+- data,
+- research methodology,
+- and meaningful system integration.
+
+Not from creating unnecessary microservices, distributed systems, or infrastructure.
+
+---
+
+## Do not optimize primarily for Kaggle ranking
+
+The competition provides the dataset and problem context.
+
+The FYP must have an independent academic research question.
+
+Leaderboard performance may be part of evaluation but should not define the project.
+
+---
+
+# Desired Final Output Structure
+
+Produce the report in this exact broad order:
+
+1. **Executive Recommendation**
+2. **What the CCP Guidelines Actually Require**
+3. **Relevant Findings From the Existing RSNA Research**
+4. **Strongest Research Directions That Can Support a Full System**
+5. **Candidate FYP System #1**
+6. **Candidate FYP System #2**
+7. **Candidate FYP System #3**
+8. **Additional Candidates if Strong Enough**
+9. **Comparison and Ranking**
+10. **Recommended FYP**
+11. **Research Question and Contribution**
+12. **Complete 8–10 Feature Set**
+13. **Feature Dependency/Coherence Analysis**
+14. **End-to-End User/System Workflow**
+15. **System Architecture**
+16. **AI/ML Architecture**
+17. **Research Methodology and Evaluation**
+18. **Dataset and Data Pipeline**
+19. **CCP Compliance Analysis**
+20. **One-Year Scope: Minimum / Target / Stretch**
+21. **Final Demonstration Scenario**
+22. **Risk and Fallback Strategy**
+23. **Skeptical Panel/Rejection Analysis**
+24. **Registration-Ready Project Definition**
+25. **Questions I Should Discuss With My Supervisor**
+26. **Final Verdict**
+
+---
+
+# Final Questions to Answer
+
+End by answering these explicitly:
+
+### 1.
+
+**Which single research direction from the existing report should form the core of the FYP, and why?**
+
+### 2.
+
+**What complete system should be built around that research direction?**
+
+### 3.
+
+**What are its 8–10 genuinely meaningful features?**
+
+### 4.
+
+**How does each part map to the actual CCP requirements?**
+
+### 5.
+
+**Why is this more than a Kaggle model wrapped in a UI?**
+
+### 6.
+
+**Why is it large enough for a one-year FYP without being unrealistically ambitious?**
+
+### 7.
+
+**What would I actually demonstrate to the FYP panel?**
+
+### 8.
+
+**What is the minimum viable version that would still constitute a successful FYP?**
+
+### 9.
+
+**What aspects should I confirm with my supervisor before registering it?**
+
+### 10.
+
+**Would you recommend registering this project in its proposed form? If not, what should change first?**
+Show more
+Monday 9:26 PM
+Uploaded an image
+Uploaded an image
+Uploaded an image
+Uploaded an image
+Uploaded an image
+Uploaded an image
+Uploaded an image
+Uploaded an image
+Uploaded an image
+Context
+
+We have finalised this 'KneeWS' idea.
+Now we have to submit the relevant information about the idea as the initial submission of our FYP.
+The google form for submission is https://forms.gle/sNWiTTCm1qsARMSJ6.
+
+Requirements of submission form regarding project
+Project Title
+Project Short Title
+Project Scope; Provide a one paragraph description of the project defining it scope. Also list down 8-10 key features of your software project.
+questions to assess the degree to which the project fulfills the requirements of a complex computing problem according to the Seoul Accord sections D.4.1 and D.4.2 (Ref. Seoul Accord: https://www.seoulaccord.org/document.php?id=79)
+
+I have attached the screenshots of the key requirements regarding project from the form.
+
+Task for you
+
+Provide the requirements asked in the submission form according to our project.
+Do not infer important details; If you need clarifications on important details, ask explicitly.
+
+Show more
+Worked for 29s
+
+TL;DR: Two of the three proposed additions fit KneeWS cleanly. The third should be constrained. I recommend adding multi-format MRI input and a structured radiology-style AI analysis report. For specialist recommendations, the defensible version is specialist-type/referral guidance, not recommending a specific doctor or giving treatment advice based solely on model probabilities.
+
+The existing research design already supports image-only inference producing probabilities for all 12 abnormalities. deep-research-report
+
+Feasibility of the proposed features
+1. MRI → radiology-style report + probabilities for all 12 abnormalities
+
+Feasibility: High, with one important modification.
+
+The probability part is already fundamental to KneeWS:
+
+MRI → model → probability for each of the 12 abnormalities.
+
+The research report explicitly defines the final output as a 12-dimensional probability vector. RSNA Knee Abnormality Detection…
+
+Generating a structured radiology-style analysis report from those results is also straightforward. For example, the system can organize its output into sections such as:
+
+Study summary
+
+Predicted findings
+
+Abnormalities with high/moderate probability
+
+Confidence values
+
+Relevant MRI evidence
+
+Limitations / uncertainty
+
+However, I would not register the feature as “generate a radiologist's report” without qualification.
+
+A real radiology report may describe:
+
+exact anatomical location;
+
+morphology;
+
+severity;
+
+tear grade;
+
+measurements;
+
+postoperative changes;
+
+incidental findings;
+
+whereas our model is fundamentally trained to predict 12 study-level abnormalities, not all of those details. RSNA Knee Abnormality Detection…
+
+So the correct feature is:
+
+AI-Generated Structured MRI Analysis Report — Generates a radiology-style structured summary of the model's predicted abnormalities, probabilities, uncertainty, and available model evidence.
+
+This is useful and does not create a second major research problem.
+
+2. Support multiple MRI formats
+
+Feasibility: High, and it fits naturally.
+
+The RSNA dataset itself is DICOM-based, and the current architecture already requires reconstruction of multiple DICOM series and slices. deep-research-report
+
+Supporting additional MRI formats can be implemented through an input normalization layer:
+
+Different MRI formats
+        ↓
+Format-specific reader
+        ↓
+Common internal study representation
+        ↓
+MRI preprocessing
+        ↓
+Model
+
+The safest committed scope is:
+
+DICOM / DICOM series — primary and mandatory.
+
+NIfTI (.nii, .nii.gz) — reasonable secondary MRI format.
+
+Packaged DICOM study/folder upload — useful system-level capability.
+
+I would not promise generic JPEG/PNG MRI analysis at registration. Those formats can lose volumetric structure and important DICOM metadata, while KneeWS is designed around a multi-series MRI examination rather than arbitrary individual images. The research report emphasizes that each examination can contain varying numbers of series and slices, orientations, and acquisition characteristics. RSNA Knee Abnormality Detection…
+
+So call the feature:
+
+Multi-Format MRI Ingestion and Standardization
+
+rather than simply “supports all image formats.”
+
+The exact supported formats can be finalized after the dataset/POC audit.
+
+3. Doctor/specialist recommendations according to disease probabilities
+
+Feasibility: technically easy, but this needs careful scoping.
+
+There are two possible interpretations.
+
+A. Recommend a type of specialist
+
+For example:
+
+High probability of ligament/meniscal abnormality
+→ Orthopedic / sports-medicine specialist review suggested
+
+This is technically straightforward.
+
+It can be implemented using a carefully defined mapping from finding categories to specialist categories, with uncertainty thresholds and explicit wording that this is referral guidance rather than medical diagnosis.
+
+I consider this feasible as a supporting product feature.
+
+B. Recommend specific doctors
+
+For example:
+
+“Visit Dr. XYZ at Hospital ABC.”
+
+I would not currently include this.
+
+That would require additional information unrelated to the research problem:
+
+user's location;
+
+doctor directory;
+
+specialty credentials;
+
+availability;
+
+potentially insurance/network;
+
+ranking criteria;
+
+external APIs/data maintenance.
+
+That begins turning KneeWS into a healthcare marketplace/referral application and weakens system coherence.
+
+So unless you specifically mean named doctors, I recommend the feature:
+
+Specialist Referral Guidance — Based on the pattern and confidence of detected abnormalities, the system identifies an appropriate specialist category for further professional review while clearly communicating that the recommendation is not a diagnosis or treatment decision.
+
+The research report itself cautions that competition performance does not establish clinical readiness or downstream treatment effectiveness. RSNA Knee Abnormality Detection…
+
+Revised Project Scope
+
+I would now use this version in the submission form:
+
+KneeWS is a research-oriented medical-imaging system that investigates how multilingual radiology reports can be used as reliable weak supervision for training multi-label knee MRI models when expert-annotated labels are scarce. Instead of treating report-derived labels as perfect binary ground truth, the system will distinguish positive, explicitly negative, uncertain, and unmentioned findings, estimate the reliability of these report states using available expert-labeled cases, and generate noise-aware probabilistic training targets. These targets will be used to train and evaluate an image-based model for twelve knee abnormalities from heterogeneous multi-series MRI examinations. The completed system will support standardized ingestion of multiple MRI formats, perform image-only inference, present the probability of each supported abnormality, generate a structured radiology-style AI analysis report, provide model evidence and uncertainty for review, and offer specialist-category referral guidance where appropriate. It will additionally provide controlled comparison between conventional hard pseudo-label supervision and the proposed noise-aware approach, together with disagreement analysis and research evaluation. KneeWS is intended as a medical-imaging research and decision-support system and not as a clinically validated diagnostic or treatment system.
+
+Revised 10 Key Features
+
+I recommend these 10 features for the form.
+
+1. Multi-Format MRI Ingestion and Standardization
+
+Accepts supported medical-imaging formats and converts them into a common internal representation suitable for MRI analysis, with DICOM as the primary format.
+
+2. Multi-Series MRI Processing
+
+Reconstructs and preprocesses the series and slices belonging to a knee MRI examination while handling differences in study structure and acquisition.
+
+3. Multilingual Radiology Report Analysis
+
+Processes training radiology reports and extracts information related to the twelve target knee abnormalities.
+
+4. Four-State Finding Interpretation
+
+Distinguishes each report finding as positive, explicitly negative, uncertain, or unmentioned rather than immediately converting every statement into a binary label.
+
+5. Noise-Aware Weak-Label Generation
+
+Estimates the reliability of report-derived findings using expert-labeled cases and generates calibrated probabilistic training targets.
+
+6. Multi-Label Knee MRI Abnormality Analysis
+
+Analyzes a new MRI study and produces probabilities for all 12 supported knee abnormalities using the trained image model.
+
+7. Structured Radiology-Style AI Analysis Report
+
+Generates a structured research/decision-support report summarizing predicted abnormalities, probabilities, uncertainty, and available model evidence.
+
+8. MRI Evidence and Prediction Review
+
+Allows users to inspect the MRI study together with predicted findings, confidence information, and relevant model evidence for case-level analysis.
+
+9. Specialist Referral Guidance
+
+Uses the detected abnormality profile and prediction confidence to suggest an appropriate specialist category for further professional review, without providing diagnosis or treatment recommendations.
+
+10. Research Comparison, Disagreement and Evaluation
+
+Compares conventional hard pseudo-label supervision with the proposed noise-aware method and enables analysis of disagreements between radiology reports, generated weak labels, MRI-model predictions, and available expert references.
+
+How the revised system looks
+
+The user-facing workflow now becomes:
+
+MRI Study
+   ↓
+Multi-format ingestion
+   ↓
+Study / series preprocessing
+   ↓
+KneeWS image model
+   ↓
+┌─────────────────────────────────┐
+│ Probabilities for 12 findings   │
+│ MRI evidence / confidence       │
+│ Structured AI analysis report   │
+│ Specialist-category guidance    │
+└─────────────────────────────────┘
+
+Behind that application remains the actual research:
+
+Multilingual training reports
+        ↓
+Positive / Negative /
+Uncertain / Unmentioned
+        ↓
+Noise reliability estimation
+        ↓
+Probabilistic weak labels
+        ↓
+MRI model training
+        ↓
+Hard-label vs Noise-aware evaluation
+
+This is a stronger FYP system because the research contribution remains intact while the final application has a much clearer workflow for a user.
+
+One detail still needs confirmation before I would lock the registration scope: by “doctor/specialist recommendations,” do you mean recommending the appropriate specialist type (e.g. orthopedic/sports-medicine review), or recommending actual named doctors/hospitals? The latter changes the scope materially.
+
+Sources
+Sources
+Questions
+
+Can't we have another model in our system specifically trained to generate radiologist style reports from MRI scans which would contribute in our feature?
+
+Yes, technically you can. The RSNA dataset is actually unusually suitable for this because the training studies are paired with real radiology reports, so you have data of the form:
+
+MRI study→radiology report
+
+for thousands of cases. deep-research-report
+
+The important question is how far you want to take report generation, because it can either remain a useful supporting feature or become a second major research problem.
+
+What the model could look like
+
+A separate report-generation model could work roughly as:
+
+Multi-series Knee MRI
+        ↓
+MRI Encoder
+        ↓
+Study Representation
+        ↓
+Report Decoder / Language Model
+        ↓
+Radiology-style Report
+
+The model would learn from the existing paired MRI + report data.
+
+For example, input:
+
+Knee MRI study
+
+Output:
+
+“Abnormal signal and morphology of the medial meniscus suspicious for tear. Moderate joint effusion is present. No acute fracture identified…”
+
+At the same time, your main classification model would still produce:
+
+ACL              0.82
+MCL              0.11
+Medial Meniscus  0.91
+...
+Fracture         0.03
+
+So the user-facing result could contain both:
+
+12 abnormality probabilities + generated descriptive report.
+
+There are three ways to implement it
+Option 1 — Generate the report directly from the 12 predictions
+
+For example:
+
+Model predictions
+     ↓
+Structured template / language generator
+     ↓
+Radiology-style summary
+
+If:
+
+Medial Meniscus = 91%
+Effusion = 78%
+Fracture = 3%
+
+the system generates:
+
+“The analysis indicates a high probability of medial meniscal abnormality and joint effusion, with a low probability of fracture.”
+
+Difficulty
+
+Low.
+
+Research value
+
+Low.
+
+System value
+
+High.
+
+This is what I was recommending previously.
+
+Option 2 — Train an MRI-to-report generation model
+
+This is what you are proposing.
+
+Instead of receiving the 12 classifier outputs, the report model examines the MRI representation itself.
+
+MRI
+ ↓
+Image encoder
+ ↓
+Visual representation
+ ↓
+Text decoder
+ ↓
+Generated radiology report
+Feasibility
+
+Yes.
+
+Difficulty
+
+High, but feasible for a one-year FYP if constrained properly.
+
+The existing research report already identifies the dataset's paired image-report structure as one of its distinctive properties and discusses image-text representation learning as a viable research direction. deep-research-report
+
+Why this is much more interesting
+
+The classification model only understands twelve predefined questions:
+
+ACL abnormality?
+Fracture?
+Effusion?
+etc.
+
+But the report contains much richer information.
+
+For example:
+
+“Small joint effusion with mild synovial thickening. Horizontal tear involving the posterior horn of the medial meniscus.”
+
+A 12-label representation throws much of that information away.
+
+A report-generation model attempts to learn:
+
+MRI→clinical description.
+
+That makes the final system considerably richer.
+
+But there is an important problem
+
+Your existing research already has one major research question:
+
+How should noisy radiology reports be used as weak supervision for MRI classification?
+
+If we now also introduce:
+
+How should MRI images be used to generate radiology reports?
+
+we have potentially introduced a second research problem.
+
+That is exactly what we were trying to avoid when designing KneeWS.
+
+The danger is that the FYP becomes:
+
+Research problem 1:
+Weak-label learning
+
++
+
+Research problem 2:
+Medical report generation
+
++
+
+MRI classifier
+
++
+
+NLP system
+
++
+
+Web application
+
+At that point the project may become too broad rather than stronger.
+
+There is, however, a clean way to integrate it
+
+I would make MRI report generation a supporting AI capability, not a second research contribution.
+
+The central research would remain:
+
+Noise-aware weak supervision.
+
+And the system could reuse the learned MRI representation for two outputs:
+
+                          ┌──→ 12 abnormality probabilities
+MRI → shared MRI encoder ─┤
+                          └──→ radiology-style report
+
+This is much more coherent.
+
+The image encoder learns a representation of the knee MRI.
+
+Then:
+
+Classification head
+
+Produces:
+
+P(Y
+1
+	​
+
+),P(Y
+2
+	​
+
+),...,P(Y
+12
+	​
+
+)
+Report-generation head
+
+Produces natural-language findings.
+
+The architecture becomes conceptually:
+
+                     MRI Study
+                         ↓
+                 Multi-Series Encoder
+                         ↓
+              Study-Level Representation
+                    /             \
+                   /               \
+                  ↓                 ↓
+        Classification Head    Report Decoder
+                  ↓                 ↓
+          12 Probabilities     AI-generated report
+
+That is a defensible system design.
+
+The report model could even support the main research
+
+There is an interesting connection.
+
+Remember how KneeWS is trained:
+
+Existing radiology report
+        ↓
+Weak labels
+        ↓
+MRI classifier training
+
+Later, the image model learns MRI representations.
+
+You could then reuse those representations to train:
+
+MRI representation
+        ↓
+Report-generation decoder
+        ↓
+Generated report
+
+So it is not necessarily an unrelated component.
+
+The overall system becomes:
+
+                    TRAINING
+
+Existing MRI + Existing Report
+              ↓
+   Noise-aware weak supervision
+              ↓
+       MRI representation
+           /       \
+          /         \
+         ↓           ↓
+12-label model   Report generator
+
+Then during actual use:
+
+                     MRI
+                      ↓
+               Shared MRI model
+                  /       \
+                 /         \
+                ↓           ↓
+       12 probabilities   Generated report
+
+This is much more coherent than training two completely independent models.
+
+There are significant challenges
+
+You should understand these before committing it as a registration feature.
+
+1. Report generation is much harder than classification
+
+Classification asks:
+
+Is ACL abnormal?
+
+Report generation asks:
+
+What structures are abnormal, how are they abnormal, where are they abnormal, how severe are the findings, and how should this be expressed medically?
+
+That is a much richer output space.
+
+2. The training reports themselves are noisy
+
+This is especially relevant to KneeWS.
+
+Our entire research hypothesis says:
+
+The clinical report isn't necessarily perfect ground truth.
+
+But now we would train another model to imitate those reports.
+
+So:
+
+generated report
+
+would represent:
+
+“a model-generated approximation of the original clinical reporting style”
+
+rather than:
+
+“the definitive truth about the MRI.”
+
+This distinction is essential.
+
+3. Hallucination becomes a serious problem
+
+A text-generating model can generate findings unsupported by the MRI.
+
+For instance:
+
+“ACL tear present”
+
+when the model does not actually have strong evidence.
+
+For a medical system this needs to be explicitly evaluated.
+
+4. Evaluation is difficult
+
+For classification:
+
+Prediction = ACL tear
+Ground truth = ACL tear
+
+Comparison is straightforward.
+
+For reports:
+
+Reference
+
+“Moderate joint effusion.”
+
+Generated
+
+“A moderate amount of fluid is present within the knee joint.”
+
+Those are semantically almost identical but textually different.
+
+So BLEU/ROUGE alone are weak.
+
+You would need some combination of:
+
+clinical finding extraction;
+
+semantic similarity;
+
+consistency with the 12 labels;
+
+hallucination/error analysis;
+
+potentially expert/proxy evaluation.
+
+That adds substantial experimental work.
+
+A very useful compromise
+
+Rather than attempting a completely free-form radiology report, train the system to generate a structured findings report.
+
+For example:
+
+Findings
+
+ACL: Findings suggest abnormal ACL morphology, with predicted abnormality probability of 84%.
+
+Medial Meniscus: High probability of abnormality (91%).
+
+Joint Effusion: Moderate-to-high probability (76%).
+
+Fracture: No strong evidence identified (4%).
+
+Impression
+
+Findings are most suggestive of medial meniscal and ACL abnormalities with associated joint effusion. Further professional radiological assessment is recommended.
+
+This could still be produced using a learned report model, but the output space is much more controlled.
+
+That considerably reduces hallucination risk and evaluation complexity.
+
+How I would classify the feature
+
+If we include it, I would change:
+
+Structured Radiology-Style AI Analysis Report
+
+to:
+
+MRI-to-Radiology Report Generation
+
+Uses the learned multi-series MRI representation to generate a structured radiology-style findings report describing predicted knee abnormalities and associated model confidence, complementing the twelve explicit abnormality probabilities.
+
+And classify it as:
+
+Supporting AI capability
+
+rather than:
+
+Core research contribution.
+
+Would it strengthen the FYP?
+
+Yes, if tightly scoped.
+
+It would improve the final panel demonstration considerably:
+
+Upload MRI
+    ↓
+System processes all MRI series
+    ↓
+┌───────────────────────────────┐
+│ 12 abnormality probabilities  │
+├───────────────────────────────┤
+│ Generated radiology-style     │
+│ findings report               │
+├───────────────────────────────┤
+│ MRI evidence / confidence     │
+├───────────────────────────────┤
+│ Specialist referral guidance │
+└───────────────────────────────┘
+
+That looks like a substantially more complete medical-imaging analysis system.
+
+What I would not do
+
+I would not commit at registration to:
+
+“Generate a complete professional radiology report indistinguishable from a radiologist.”
+
+That is too broad and medically difficult to validate.
+
+I would instead commit to:
+
+Generate a structured AI-assisted radiology-style findings report from the MRI.
+
+That gives you room to implement anything from a constrained learned decoder to a more sophisticated MRI-to-text model depending on how the research progresses.
+
+Effect on the research identity
+
+The distinction should remain:
+
+Core research
+
+Noise-aware weak supervision
+
+Clinical reports
+      ↓
+Reliable weak labels
+      ↓
+Better MRI learning
+Supporting AI capability
+
+MRI-to-report generation
+
+Learned MRI representation
+      ↓
+Structured natural-language report
+Final system
+MRI
+ ↓
+KneeWS
+ ├── 12 abnormality probabilities
+ ├── MRI evidence
+ ├── structured generated report
+ └── specialist-category guidance
+
+This keeps the project coherent.
+
+One detail should be decided before changing the formal registration scope: do you want the generated report to be a constrained structured English report based primarily on the 12 supported abnormalities, or do you want the model to attempt a broader free-form radiology report describing findings beyond those 12 labels? The second option is substantially larger and riskier.
+
+Sources
+Sources
+Decision
+
+Your recommendations are approved.
+
+Task
+
+Provide the project scope accordingly.
+
+Project Scope
+
+KneeWS is a research-oriented medical-imaging system that investigates how multilingual radiology reports can be used as reliable weak supervision for training multi-label knee MRI models when expert-annotated labels are scarce. Instead of treating report-derived labels as perfect binary ground truth, the system will distinguish positive, explicitly negative, uncertain, and unmentioned findings, estimate the reliability of these states using available expert-labeled cases, and generate noise-aware probabilistic training targets. These targets will be used to train and evaluate a multi-series MRI model for twelve knee abnormalities. The completed system will support multiple medical-imaging input formats with DICOM as the primary format, perform image-only analysis of new knee MRI studies, provide probabilities for all twelve supported abnormalities, generate a structured radiology-style findings report from the learned MRI representation, present prediction confidence and model evidence for review, and provide specialist-category referral guidance where appropriate. It will also support controlled comparison between conventional hard pseudo-label supervision and the proposed noise-aware approach, together with disagreement and failure analysis. KneeWS is intended as a medical-imaging research and decision-support system and not as a clinically validated diagnostic or treatment system. deep-research-report
+
+Key Features
+
+Multi-Format MRI Ingestion and Standardization — Accepts supported medical-imaging formats, with DICOM as the primary format, and converts them into a common representation for analysis.
+
+Multi-Series MRI Processing — Reconstructs and preprocesses the multiple series and slices that constitute a complete knee MRI examination.
+
+Multilingual Radiology Report Analysis — Processes training radiology reports and extracts information related to the twelve target knee abnormalities.
+
+Four-State Finding Interpretation — Represents report findings as positive, explicitly negative, uncertain, or unmentioned rather than directly forcing every finding into a binary label.
+
+Noise-Aware Weak-Label Generation — Uses available expert-labeled cases to estimate condition-specific report reliability and generate probabilistic training targets.
+
+Multi-Label Knee MRI Abnormality Analysis — Performs image-only analysis and outputs the probability of each of the 12 supported knee abnormalities.
+
+Structured MRI-to-Radiology Report Generation — Uses the learned MRI representation to generate a controlled, structured radiology-style findings report summarizing supported abnormalities, confidence, and relevant findings.
+
+MRI Evidence and Prediction Review — Allows users to inspect MRI series alongside predicted abnormalities, confidence information, and relevant model evidence.
+
+Specialist Referral Guidance — Suggests an appropriate specialist category for further professional assessment based on the predicted abnormality profile, without recommending specific doctors or providing treatment decisions.
+
+Research Comparison and Disagreement Analysis — Compares conventional hard pseudo-label supervision against the proposed noise-aware approach and analyzes disagreements among source reports, weak labels, MRI predictions, and available expert references.
+
+This keeps the central research contribution as noise-aware weak supervision, while report generation, multi-format ingestion, MRI review, and referral guidance make it a coherent and demonstrable software system rather than only an ML experiment, consistent with the FAST requirement for a research-informed, deployable FYP artefact. FAST_FYP_Student_Idea_Selection…
+
+Sources
+Sources
+ChatGPT is AI and can make mistakes.
