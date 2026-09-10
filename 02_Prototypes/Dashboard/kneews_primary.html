@@ -280,17 +280,32 @@ p { margin: 0 0 0.75em; max-width: 68ch; color: var(--ink-2); }
   box-shadow: 0 0 10px var(--accent-bright);
 }
 
+/* Navigation Icons & Item Alignment */
+.nav-ic {
+  flex-shrink: 0;
+  color: var(--ink-3);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.nav button:hover .nav-ic {
+  color: var(--ink);
+  transform: scale(1.05);
+}
+.nav button[aria-current="page"] .nav-ic {
+  color: var(--accent-bright);
+}
+
 /* Rubric Tag Toggle (F1..F10) */
 .nav .k {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 10.5px;
+  font-size: 10px;
   color: var(--ink-3);
-  min-width: 26px;
+  min-width: 22px;
   background: var(--ground);
   border: 1px solid var(--rule);
-  border-radius: 5px;
+  border-radius: 4px;
   text-align: center;
-  padding: 1px 5px;
+  padding: 1px 4px;
+  margin-left: auto;
   transition: all 0.2s ease;
 }
 .nav button[aria-current="page"] .k {
@@ -298,9 +313,39 @@ p { margin: 0 0 0.75em; max-width: 68ch; color: var(--ink-2); }
   color: #FFF;
   border-color: var(--accent);
 }
-/* When Rubric Mode is OFF, tuck badges to subtle dots */
 body.hide-rubric .nav .k {
   display: none;
+}
+
+/* Tour Floating Bar */
+.tour-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(14, 19, 26, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--accent-bright);
+  border-radius: 999px;
+  padding: 8px 16px 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.6), 0 0 20px var(--accent-glow);
+  z-index: 1000;
+  animation: screenFadeIn 0.25s ease;
+}
+.tour-bar[hidden] { display: none !important; }
+.tour-step-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink);
+}
+[data-theme="light"] .tour-bar {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
 }
 
 .demo {
@@ -426,6 +471,9 @@ body.hide-rubric .nav .k {
 }
 
 .screen[hidden] { display: none; }
+.screen:not([hidden]) {
+  animation: screenFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
 .head {
   display: flex;
@@ -867,7 +915,6 @@ tr.click { cursor: pointer; }
   height: auto;
   aspect-ratio: 1 / 1;
   display: block;
-  image-rendering: pixelated;
   cursor: crosshair;
 }
 .vside {
@@ -976,8 +1023,8 @@ tr.click { cursor: pointer; }
   position: absolute;
   top: -4px;
   height: 20px;
-  border-left: 2px solid #F8FAFC;
-  border-right: 2px solid #F8FAFC;
+  border-left: 2px solid var(--ink);
+  border-right: 2px solid var(--ink);
   opacity: 0.8;
   pointer-events: none;
 }
@@ -987,7 +1034,7 @@ tr.click { cursor: pointer; }
   left: 0;
   right: 0;
   top: 9px;
-  border-top: 1.5px dashed #F8FAFC;
+  border-top: 1.5px dashed var(--ink);
 }
 .pr.abst .bar i {
   background: repeating-linear-gradient(45deg, var(--unmentioned) 0 4px, transparent 4px 8px);
@@ -1284,7 +1331,7 @@ tr.click { cursor: pointer; }
 }
 </style>
 </head>
-<body>
+<body class="hide-rubric">
 
 <div class="app">
 <!-- ==========================================================================
@@ -1301,23 +1348,67 @@ tr.click { cursor: pointer; }
 
   <div class="nav">
     <div class="navsec">Overview</div>
-    <button data-go="home"><span class="k">⌘0</span>System Architecture</button>
+    <button data-go="home">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+      <span>System Architecture</span>
+      <span class="k">⌘0</span>
+    </button>
 
     <div class="navsec">Clinical Workstation (Inference)</div>
-    <button data-go="ingest"><span class="k">F1·2</span>DICOM Ingestion</button>
-    <button data-go="viewer"><span class="k">F8</span>PACS Slice Viewer</button>
-    <button data-go="analysis"><span class="k">F6</span>Diagnostic Predictions</button>
-    <button data-go="report"><span class="k">F7</span>Radiology Draft Report</button>
-    <button data-go="referral"><span class="k">F9</span>Specialist Triage</button>
+    <button data-go="ingest">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+      <span>DICOM Ingestion</span>
+      <span class="k">F1·2</span>
+    </button>
+    <button data-go="viewer">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+      <span>PACS Slice Viewer</span>
+      <span class="k">F8</span>
+    </button>
+    <button data-go="analysis">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+      <span>Diagnostic Predictions</span>
+      <span class="k">F6</span>
+    </button>
+    <button data-go="report">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+      <span>Radiology Draft Report</span>
+      <span class="k">F7</span>
+    </button>
+    <button data-go="referral">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span>Specialist Triage</span>
+      <span class="k">F9</span>
+    </button>
 
     <div class="navsec">Research &amp; Validation (Training)</div>
-    <button data-go="workbench"><span class="k">F3·4</span>Multilingual NLP Workbench</button>
-    <button data-go="rules" id="navF5"><span class="k">F5</span>Reliability Rules (Primary)</button>
-    <button data-go="experiment"><span class="k">F10</span>Model Benchmark Race</button>
-    <button data-go="disagree"><span class="k">F10</span>Disagreement Audit</button>
+    <button data-go="workbench">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+      <span>Multilingual NLP Workbench</span>
+      <span class="k">F3·4</span>
+    </button>
+    <button data-go="rules" id="navF5">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1zM2 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1zM7 21h10M12 3v18"/></svg>
+      <span>Reliability Rules (Primary)</span>
+      <span class="k">F5</span>
+    </button>
+    <button data-go="experiment">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg>
+      <span>Model Benchmark Race</span>
+      <span class="k">F10</span>
+    </button>
+    <button data-go="disagree">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM12 8v4M12 16h.01"/></svg>
+      <span>Disagreement Audit</span>
+      <span class="k">F10</span>
+    </button>
 
     <div class="navsec">Hospital Deployment</div>
-    <button data-go="onboard" class="ext"><span class="k">X</span>Institution Onboarding</button>
+    <button data-go="onboard" class="ext">
+      <svg class="nav-ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9h1M9 13h1M9 17h1"/></svg>
+      <span>Institution Onboarding</span>
+      <span class="k">X</span>
+    </button>
   </div>
 
   <div class="demo">
@@ -1336,7 +1427,7 @@ tr.click { cursor: pointer; }
     <div class="top-right">
       <!-- Rubric Mode Switch -->
       <label class="rubric-toggle" title="Toggle FYP Committee rubric badges (F1..F10)">
-        <input type="checkbox" id="rubricSwitch" checked>
+        <input type="checkbox" id="rubricSwitch">
         <span>FYP Rubric Badges</span>
       </label>
 
@@ -1903,6 +1994,18 @@ tr.click { cursor: pointer; }
 </div><!-- /.main -->
 </div><!-- /.app -->
 
+<div class="tour-bar" id="tourBar" hidden>
+  <div class="tour-step-info">
+    <span class="pill acc" id="tourBadge">Step 1 of 4</span>
+    <span id="tourText">Multilingual NLP: Native report reading without binary loss</span>
+  </div>
+  <div class="row" style="gap:8px">
+    <button class="btn sm" id="tourPrev">← Back</button>
+    <button class="btn sm pri" id="tourNext">Next Step →</button>
+    <button class="btn sm" id="tourExit" title="Exit tour">✕</button>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <!-- ==========================================================================
@@ -2059,6 +2162,12 @@ const TITLES = {
 };
 
 function go(id) {
+  if (cineTimer) {
+    clearInterval(cineTimer);
+    cineTimer = null;
+    const cb = $("#cineBtn");
+    if (cb) cb.textContent = "▶ Play Cine Loop";
+  }
   S.screen = id;
   $$(".screen").forEach(s => s.hidden = (s.id !== "s-" + id));
   $$(".nav button").forEach(b => b.setAttribute("aria-current", b.dataset.go === id ? "page" : "false"));
@@ -2066,8 +2175,55 @@ function go(id) {
   window.scrollTo({ top: 0, behavior: "smooth" });
   render(id);
 }
+
+/* ---------- Guided Panel Pitch Tour (90s Presentation Mode) ---------- */
+const TOUR_STEPS = [
+  { screen: "workbench", badge: "Step 1 of 4 · The Input", text: "Multilingual NLP: Native reports parsed into 4 distinct states without forced 0/1 binary assumptions." },
+  { screen: VARIANT === "B" ? "cl" : "rules", badge: "Step 2 of 4 · The Calibration", text: VARIANT === "B" ? "Confident Learning: Deriving noise transition matrix without spending a single expert label." : "Noise-Aware Rules: Calibrated empirical odds (0.13 unmentioned) with Bayesian credible ranges." },
+  { screen: "viewer", badge: "Step 3 of 4 · The Model", text: "PACS Evidence Viewer: Zero-report test-time inference on volumetric MRI with localized attention heatmaps." },
+  { screen: "experiment", badge: "Step 4 of 4 · The Result", text: "Benchmark Race: 0.861 AUROC superiority with 65% reduction in expected calibration error." }
+];
+let tourIdx = 0;
+const tourBar = $("#tourBar");
+const tourBadge = $("#tourBadge");
+const tourText = $("#tourText");
+
+function startTour(stepIdx = 0) {
+  tourIdx = Math.max(0, Math.min(TOUR_STEPS.length - 1, stepIdx));
+  tourBar.hidden = false;
+  updateTourStep();
+}
+function updateTourStep() {
+  const step = TOUR_STEPS[tourIdx];
+  tourBadge.textContent = step.badge;
+  tourText.textContent = step.text;
+  $("#tourPrev").disabled = (tourIdx === 0);
+  $("#tourNext").textContent = (tourIdx === TOUR_STEPS.length - 1) ? "Complete Tour ✓" : "Next Step →";
+  go(step.screen);
+}
+$("#tourNext").addEventListener("click", () => {
+  if (tourIdx < TOUR_STEPS.length - 1) {
+    tourIdx++;
+    updateTourStep();
+  } else {
+    tourBar.hidden = true;
+    toast("Guided tour complete! Ready for Q&A.");
+  }
+});
+$("#tourPrev").addEventListener("click", () => {
+  if (tourIdx > 0) {
+    tourIdx--;
+    updateTourStep();
+  }
+});
+$("#tourExit").addEventListener("click", () => {
+  tourBar.hidden = true;
+});
+
+// Update cine loop stop on go(id)
+
 $$(".nav button").forEach(b => b.addEventListener("click", () => go(b.dataset.go)));
-$$(".pitch-card").forEach(b => b.addEventListener("click", () => go(b.dataset.go)));
+$$(".pitch-card").forEach((b, idx) => b.addEventListener("click", () => startTour(idx)));
 
 function toast(m) {
   const t = $("#toast");
