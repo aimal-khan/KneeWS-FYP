@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-notebooks:
+    name: Validate Notebooks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install notebook validation dependencies
+        run: pip install nbformat
+
+      - name: Validate all notebooks are valid JSON and have no stored outputs
+        run: |
+          python - <<'EOF'
+          import nbformat
+          import sys
+          from pathlib import Path
+
+          errors = []
+          notebooks = list(Path("notebooks").glob("*.ipynb"))
+
+          if not notebooks:
+              print("No notebooks found — skipping validation.")
+              sys.exit(0)
+
+          for nb_path in sorted(notebooks):
+              try:
+                  nb = nbformat.read(str(nb_path), as_version=4)
+                  for i, cell in enumerate(nb.cells):
+                      if cell.cell_type == "code" and cell.get("outputs"):
+                          errors.append(
+                              f"{nb_path.name}: cell {i} has stored outputs — "
+                              "run Kernel → Restart & Clear Output before committing"
+                          )
+              except Exception as e:
+                  errors.append(f"{nb_path.name}: invalid notebook — {e}")
+
+          if errors:
+              for err in errors:
+                  print(f"ERROR: {err}")
+              sys.exit(1)
+
+          print(f"OK: {len(notebooks)} notebook(s) validated.")
+          EOF
+
+  test:
+    name: Smoke Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install test dependencies
+        run: pip install pytest nbformat
+
+      - name: Run smoke tests
+        run: pytest tests/ -v --tb=short

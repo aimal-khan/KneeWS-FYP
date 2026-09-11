@@ -1,4 +1,4 @@
-# Operating System
+# ─── Operating System ────────────────────────────────────────────────────────
 .DS_Store
 .DS_Store?
 ._*
@@ -7,7 +7,7 @@
 ehthumbs.db
 Thumbs.db
 
-# Python & Virtual Environments
+# ─── Python & Virtual Environments ───────────────────────────────────────────
 venv/
 .venv/
 env/
@@ -17,30 +17,51 @@ __pycache__/
 *$py.class
 *.so
 .Python
+.eggs/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
 
-# Node & Next.js
+# ─── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ─── Node / Frontend (serve_prototypes dev deps) ─────────────────────────────
 node_modules/
 .next/
 out/
-build/
-dist/
 *.tsbuildinfo
 
-# Logs & Environment Variables
+# ─── Logs & Environment Variables ────────────────────────────────────────────
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*.log.*
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 
-# Temporary Office & Lock Files
+# ─── Temporary Office & Lock Files ───────────────────────────────────────────
 ~$*
 
-# External sub-repositories
-RSNA_Knee_Abnormality_Detection/
+# ─── ML Artifacts (large binary files — not tracked in Git) ──────────────────
+# Store checkpoints in models/vNN/ and results in results/vNN/ locally.
+models/
+results/
+*.pt
+*.pth
+*.ckpt
+*.h5
 
+# ─── DICOM / Medical Imaging Cache ────────────────────────────────────────────
+*.dcm
+dicom_cache/
+series_cache/
+path_cache/
 
+# ─── Local / Private Files ────────────────────────────────────────────────────
+# Place any private docs, school guides, or personal notes here.
+local/
+private/
+FAST_FYP_*.pdf
+*_archive/
+_archive/
+legacy_research/
